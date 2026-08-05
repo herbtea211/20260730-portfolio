@@ -1,0 +1,735 @@
+# Lesson 11｜Sprint 0.6｜Local Repository 與 Remote Repository
+
+> 日期：2026-08-05
+>
+> 專案：20260730-portfolio
+>
+> Sprint：Sprint 0.6 - Cloud Development Workflow
+
+---
+
+# 本章目標
+
+本章不學 GitHub Codespaces。
+
+目標只有一個：
+
+> 建立 Local Repository 與 Remote Repository 的完整模型，理解 Git Push 的真正目的。
+
+---
+
+# 我們真正的需求
+
+原本以為：
+
+```text
+任何一台有 Node.js 的電腦
+
+↓
+
+都可以開發
+```
+
+實際需求變成：
+
+```text
+任何一台只有瀏覽器的電腦
+
+↓
+
+也可以開發
+```
+
+例如：
+
+- 網咖
+- 圖書館
+- 公司臨時電腦
+
+因此：
+
+專案不能只存在自己的 Mac。
+
+---
+
+# Git Workflow
+
+完整流程：
+
+```text
+Coding
+    │
+    ▼
+⌘ + S
+    │
+    ▼
+Hard Disk
+
+──────────────
+
+git add
+    │
+    ▼
+Staging Area
+
+──────────────
+
+git commit
+    │
+    ▼
+Local Repository
+
+──────────────
+
+git push
+    │
+    ▼
+Remote Repository（GitHub）
+```
+
+每一步：
+
+都只有一個職責。
+
+---
+
+# Save
+
+作用：
+
+把檔案寫進：
+
+```
+SSD（Hard Disk）
+```
+
+不是：
+
+Git。
+
+---
+
+# git add
+
+作用：
+
+> Git 開始管理這一次的變更（Changes）。
+
+不是：
+
+- Commit
+- Backup
+- Push
+
+例如：
+
+```
+Untracked
+        │
+git add
+        ▼
+Changes to be committed
+```
+
+---
+
+# git commit
+
+作用：
+
+建立：
+
+```
+Snapshot
+```
+
+也就是：
+
+一個新的：
+
+```
+Version
+```
+
+例如：
+
+```
+Version 1
+
+↓
+
+Version 2
+
+↓
+
+Version 3
+```
+
+Git 管理的是：
+
+歷史。
+
+不是：
+
+檔案。
+
+---
+
+# git push
+
+作用：
+
+把：
+
+```
+Local Repository
+```
+
+同步到：
+
+```
+Remote Repository
+```
+
+不是：
+
+建立 Commit。
+
+---
+
+# Local Repository
+
+位於：
+
+自己的電腦。
+
+例如：
+
+```
+MacBook
+```
+
+目前：
+
+```
+Commit
+
+↓
+
+fa9a618
+```
+
+都存在：
+
+Local Repository。
+
+---
+
+# Remote Repository
+
+位於：
+
+GitHub。
+
+例如：
+
+```
+herbtea211/20260730-portfolio
+```
+
+Remote：
+
+不是：
+
+GitHub。
+
+GitHub：
+
+只是：
+
+其中一種 Remote。
+
+例如：
+
+```
+GitHub
+
+GitLab
+
+Bitbucket
+
+Self-host Git Server
+```
+
+都可以是：
+
+Remote Repository。
+
+---
+
+# Remote
+
+Remote：
+
+就是：
+
+Local Repository 與另一個 Repository 的連線資訊。
+
+例如：
+
+```
+origin
+
+↓
+
+git@github.com:herbtea211/20260730-portfolio.git
+```
+
+Remote：
+
+不是：
+
+Repository。
+
+而是：
+
+Repository 的地址。
+
+---
+
+# origin
+
+origin：
+
+不是：
+
+Git 規定的名字。
+
+只是：
+
+Remote 的預設名稱。
+
+例如：
+
+下面都合法：
+
+```
+origin
+
+github
+
+company
+
+backup
+```
+
+只是：
+
+業界幾乎都使用：
+
+```
+origin
+```
+
+---
+
+# 為什麼公司都使用 origin？
+
+原因不是：
+
+Git 規定。
+
+而是：
+
+大部分專案：
+
+只有：
+
+一個主要 Remote。
+
+因此：
+
+大家約定俗成：
+
+稱為：
+
+```
+origin
+```
+
+---
+
+# git remote add
+
+第一次：
+
+需要建立：
+
+```
+Local Repository
+
+        │
+
+        ▼
+
+origin
+
+        │
+
+        ▼
+
+GitHub Repository
+```
+
+指令：
+
+```bash
+git remote add origin git@github.com:herbtea211/20260730-portfolio.git
+```
+
+拆開理解：
+
+```
+git
+
+↓
+
+remote
+
+↓
+
+add
+
+↓
+
+origin
+
+↓
+
+Repository URL
+```
+
+中文意思：
+
+> 新增一個叫做 origin 的 Remote，它的位置是指定的 GitHub Repository。
+
+---
+
+# git remote -v
+
+用途：
+
+查看：
+
+目前有哪些 Remote。
+
+例如：
+
+```
+origin
+
+↓
+
+fetch
+
+↓
+
+push
+```
+
+---
+
+# fetch
+
+用途：
+
+從 Remote：
+
+下載最新版本。
+
+今天：
+
+只理解：
+
+```
+下載
+```
+
+之後：
+
+Lesson 再深入。
+
+---
+
+# push
+
+用途：
+
+把：
+
+Local Repository：
+
+同步到：
+
+Remote Repository。
+
+今天：
+
+第一次完成：
+
+```bash
+git push -u origin main
+```
+
+---
+
+# -u
+
+完整名稱：
+
+```
+--set-upstream
+```
+
+用途：
+
+建立：
+
+```
+main
+
+↓
+
+origin/main
+```
+
+的預設關係。
+
+因此：
+
+之後：
+
+只需要：
+
+```bash
+git push
+```
+
+Git：
+
+就知道：
+
+推到：
+
+```
+origin/main
+```
+
+---
+
+# Repository、Branch、Commit、Remote
+
+四個不同層級：
+
+```
+Repository
+
+↓
+
+Branch
+
+↓
+
+Commit
+
+↓
+
+Remote
+```
+
+例如：
+
+```
+Repository
+
+↓
+
+main
+
+↓
+
+fa9a618
+
+↓
+
+origin
+
+↓
+
+GitHub
+```
+
+不要混在一起。
+
+---
+
+# 本章建立的工程思維
+
+Git：
+
+不是：
+
+存檔工具。
+
+而是：
+
+Version Control。
+
+GitHub：
+
+不是：
+
+備份空間。
+
+而是：
+
+Remote Repository。
+
+Push：
+
+不是：
+
+存檔。
+
+而是：
+
+同步 Repository。
+
+---
+
+# 我的思考誤區（My Misconceptions）
+
+## 誤區一：Commit 就是存檔
+
+### 我的原本理解
+
+```
+git commit
+
+↓
+
+存檔
+```
+
+### 修正後
+
+```
+git commit
+
+↓
+
+建立一個新的歷史版本（Snapshot）
+```
+
+真正的存檔：
+
+是：
+
+```
+⌘ + S
+```
+
+---
+
+## 誤區二：origin 就是 GitHub
+
+### 我的原本理解
+
+```
+origin
+
+↓
+
+GitHub
+```
+
+### 修正後
+
+```
+origin
+
+↓
+
+Remote Name
+```
+
+GitHub：
+
+只是：
+
+其中一種 Remote。
+
+---
+
+## 誤區三：git push 是 Git 最後一步
+
+### 我的原本理解
+
+```
+Push
+
+↓
+
+完成
+```
+
+### 修正後
+
+```
+Push
+
+↓
+
+GitHub 更新
+
+↓
+
+Codespaces
+
+↓
+
+任何地方都可以開發
+```
+
+Push：
+
+只是：
+
+Cloud Workflow 的開始。
+
+---
+
+# 本章一句話總結
+
+> Git 管理版本；Local Repository 保存本機歷史；Remote Repository 保存共享歷史；Push 則負責同步兩者，讓任何地方都能取得最新版本。
+
+---
+
+# 關鍵字（Keywords）
+
+- Local Repository
+- Remote Repository
+- Remote
+- origin
+- Branch
+- Commit
+- Snapshot
+- git add
+- git commit
+- git push
+- git remote
+- git remote -v
+- git remote add
+- upstream
+- Version Control
+- Cloud Development
