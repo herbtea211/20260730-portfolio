@@ -1,0 +1,619 @@
+# Lesson 10｜Sprint 1｜開始建立作品集
+
+> 日期：2026-08-05
+>
+> 專案：20260730-portfolio
+>
+> Sprint：Sprint 1 - Home Page
+
+---
+
+# 本章目標
+
+本章正式開始作品集開發。
+
+目標不是學 React。
+
+而是：
+
+> 建立作品集網站的基本架構，並理解 React Component 與 Next.js App Router 的運作方式。
+
+---
+
+# 我們調整了開發流程
+
+原本：
+
+```text
+Sprint 1
+
+開好所有 Page
+        │
+        ▼
+切一個 Component
+        │
+        ▼
+學 React
+        │
+        ▼
+完成一個 Section
+        │
+        ▼
+Git Commit
+```
+
+調整後：
+
+```text
+Figma
+        │
+        ▼
+解析畫面
+        │
+        ▼
+Section 規劃
+        │
+        ▼
+Coding
+        │
+        ▼
+需要時學 React
+        │
+        ▼
+Git Commit
+```
+
+React：
+
+不是主角。
+
+而是：
+
+完成作品集的工具。
+
+---
+
+# App Router
+
+在 Next.js App Router 中：
+
+> 一個資料夾，就是一個網址（Route）。
+
+例如：
+
+```text
+src/
+└── app/
+    ├── page.tsx
+    ├── about/
+    │   └── page.tsx
+    ├── works/
+    │   └── page.tsx
+    └── resume/
+        └── page.tsx
+```
+
+代表：
+
+```text
+/          Home
+
+/about     About
+
+/works     Works
+
+/resume    Resume
+```
+
+不用自己設定 Router。
+
+Next.js 會依照資料夾自動建立網址。
+
+---
+
+# 建立網站 Pages
+
+完成：
+
+```text
+src/app
+
+page.tsx
+
+about/
+    page.tsx
+
+works/
+    page.tsx
+
+resume/
+    page.tsx
+```
+
+這是作品集第一個網站架構。
+
+---
+
+# 第一個 React Component
+
+About Page：
+
+```tsx
+export default function AboutPage() {
+  return <h1>About</h1>;
+}
+```
+
+Works：
+
+```tsx
+export default function WorksPage() {
+  return <h1>Works</h1>;
+}
+```
+
+Resume：
+
+```tsx
+export default function ResumePage() {
+  return <h1>Resume</h1>;
+}
+```
+
+---
+
+# React Component
+
+最基本形式：
+
+```tsx
+function Component() {
+    return (...)
+}
+```
+
+Component 的工作：
+
+> 回傳（Return）UI。
+
+不是：
+
+回傳資料。
+
+而是：
+
+回傳畫面。
+
+例如：
+
+```tsx
+return <h1>About</h1>;
+```
+
+畫面就是：
+
+```
+About
+```
+
+---
+
+# return 的真正意思
+
+以前容易理解成：
+
+```
+return
+
+↓
+
+回傳資料
+```
+
+React 中：
+
+更好的理解：
+
+```
+return
+
+↓
+
+我要畫什麼畫面
+```
+
+例如：
+
+```tsx
+return <button>Click Me</button>;
+```
+
+畫面：
+
+```
+[ Click Me ]
+```
+
+---
+
+# Home Page
+
+Next.js 建立專案後。
+
+首頁：
+
+```text
+page.tsx
+```
+
+內建很多官方 Demo。
+
+例如：
+
+- Next.js Logo
+- Deploy Now
+- Documentation
+
+這些都不是作品集的一部分。
+
+因此：
+
+全部移除。
+
+改成：
+
+```tsx
+export default function Home() {
+  return <h1>Home</h1>;
+}
+```
+
+代表：
+
+> 正式接管作品集首頁。
+
+---
+
+# Development Server
+
+第一次真正使用：
+
+```bash
+npm run dev
+```
+
+作用不是：
+
+執行一次程式。
+
+而是：
+
+> 啟動開發伺服器（Development Server）。
+
+之後：
+
+```text
+VS Code
+        │
+        ▼
+npm run dev
+        │
+        ▼
+localhost:3000
+        │
+        ▼
+開始開發
+```
+
+整天都不用重新執行。
+
+除非：
+
+Terminal 關閉。
+
+---
+
+# Hot Reload
+
+修改：
+
+```tsx
+return <h1>Hello Sam!</h1>;
+```
+
+儲存：
+
+```
+⌘ + S
+```
+
+瀏覽器：
+
+不用重新整理。
+
+畫面立即更新。
+
+流程：
+
+```text
+修改程式
+        │
+        ▼
+存檔
+        │
+        ▼
+Next.js 偵測變更
+        │
+        ▼
+重新編譯
+        │
+        ▼
+瀏覽器更新
+```
+
+這就是：
+
+Hot Reload。
+
+---
+
+# Header 規劃
+
+分析 Figma 後。
+
+Home Page：
+
+```text
+Home
+
+├── Header
+├── Hero
+├── Selected Work
+└── Footer（之後）
+```
+
+其中：
+
+Header：
+
+會出現在：
+
+- Home
+- Works
+- About
+- Resume
+
+因此：
+
+屬於：
+
+Reusable Component。
+
+---
+
+# 為什麼 Header 要先抽成 Component？
+
+不是因為：
+
+```
+React 都要切 Component
+```
+
+真正原因：
+
+```
+Header
+
+↓
+
+多個 Page 共用
+
+↓
+
+值得重用
+```
+
+因此：
+
+建立：
+
+```text
+src/
+
+components/
+
+Header/
+    Header.tsx
+```
+
+---
+
+# Component Folder
+
+不是：
+
+```text
+components/
+
+Header.tsx
+```
+
+而是：
+
+```text
+components/
+
+Header/
+    Header.tsx
+```
+
+原因：
+
+未來：
+
+```
+Header/
+
+Header.tsx
+
+Header.module.css
+
+types.ts
+
+hooks.ts
+
+index.ts
+```
+
+都可以放在一起。
+
+讓每個 Component 都有自己的家。
+
+---
+
+# 本章建立的工程思維
+
+React Component
+
+不是：
+
+```
+一個檔案
+```
+
+而是：
+
+```
+一個可以重複使用的 UI 單位。
+```
+
+只有：
+
+值得重用。
+
+才建立 Component。
+
+不是：
+
+為了切而切。
+
+---
+
+# 我的思考誤區（My Misconceptions）
+
+## 誤區一：return 是回傳資料
+
+### 我的原本理解
+
+```
+return
+
+↓
+
+回傳資料
+```
+
+### 修正後
+
+React 中：
+
+```
+return
+
+↓
+
+回傳 UI（畫面）
+```
+
+### 為什麼容易誤解？
+
+受到一般 JavaScript function 的影響，容易把所有 `return` 都理解成回傳資料，而忽略在 React Component 中，它回傳的是畫面。
+
+---
+
+## 誤區二：一開始就要把所有東西切成 Component
+
+### 我的原本理解
+
+React 專案應該一開始就大量建立 Component。
+
+### 修正後
+
+只有：
+
+```
+Reusable（可重用）
+```
+
+才值得抽成 Component。
+
+例如：
+
+```
+Header
+```
+
+因為：
+
+四個頁面都會共用。
+
+### 為什麼容易誤解？
+
+很多 React 教學強調 Component，容易讓人誤以為切得越細越好，而忽略是否真的有重用需求。
+
+---
+
+## 誤區三：npm run dev 是執行一次
+
+### 我的原本理解
+
+```
+npm run dev
+```
+
+就是執行網站一次。
+
+### 修正後
+
+它真正做的是：
+
+```
+啟動 Development Server
+```
+
+之後：
+
+一直監看：
+
+程式變化。
+
+自動重新編譯。
+
+### 為什麼容易誤解？
+
+因為只看到輸入指令，沒有理解它其實是一個持續運作的開發服務。
+
+---
+
+# 本章一句話總結
+
+> React Component 的工作是回傳 UI；Next.js App Router 以資料夾建立網站路由；Development Server 則提供持續開發與 Hot Reload，讓我們能專注於完成作品集。
+
+---
+
+# 關鍵字（Keywords）
+
+- Next.js
+- App Router
+- Route
+- Page
+- React Component
+- JSX
+- return
+- Development Server
+- Hot Reload
+- localhost
+- Home Page
+- Header
+- Reusable Component
+- Component Folder

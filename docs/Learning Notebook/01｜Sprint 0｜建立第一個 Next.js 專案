@@ -1,0 +1,357 @@
+# Lesson 01｜Sprint 0｜建立第一個 Next.js 專案
+
+> 日期：2026-07-31
+>
+> 專案：20260730-portfolio
+>
+> Sprint：Sprint 0 - 建立開發環境
+
+---
+
+# 本章目標
+
+本章不寫任何 React 程式。
+
+目標只有一個：
+
+> 建立一個正確、可長期維護的 Next.js 開發環境，並理解每個初始化選項背後的原因。
+
+---
+
+# 建立專案流程
+
+```text
+GitHub Repository
+        │
+        ▼
+建立本地 Projects 資料夾
+        │
+        ▼
+create-next-app
+        │
+        ▼
+package.json
+        │
+        ▼
+Git Repository
+        │
+        ▼
+第一個 Commit（下一章）
+```
+
+---
+
+# 專案位置
+
+```text
+Documents/
+└── Projects/
+    └── 20260730-portfolio/
+```
+
+所有未來的程式專案都放在：
+
+```
+~/Documents/Projects
+```
+
+---
+
+# create-next-app 選項
+
+| 項目 | 選擇 | 原因 |
+|------|------|------|
+| TypeScript | ✅ Yes | 型別安全，React 主流 |
+| ESLint | ✅ ESLint | 官方生態成熟，學習資源最多 |
+| React Compiler | ❌ No | 先理解 React，再學自動最佳化 |
+| Tailwind CSS | ✅ Yes | React 生態主流，適合 Design System |
+| src directory | ✅ Yes | 大型專案更容易維護 |
+| App Router | ✅ Yes | Next.js 未來主流架構 |
+| Import Alias | ❌ No | 使用官方預設 `@/*` |
+| AGENTS.md | ✅ Yes | 建立 AI 協作規範 |
+
+---
+
+# TypeScript
+
+## Why
+
+JavaScript 是弱型別語言。
+
+大型專案容易因型別錯誤產生 Bug。
+
+TypeScript 在編譯時就能發現問題。
+
+## 重點
+
+- React 主流
+- Next.js 官方推薦
+- Component Contract
+- Props 型別安全
+
+---
+
+# ESLint
+
+## Why
+
+不是排版工具。
+
+而是：
+
+程式碼品質管理工具。
+
+## 功能
+
+- Coding Style
+- 潛在錯誤
+- 團隊一致性
+
+---
+
+# React Compiler
+
+## Why
+
+React 新一代最佳化工具。
+
+目的是：
+
+自動取代部分：
+
+- useMemo
+- useCallback
+
+等手動最佳化。
+
+## 為什麼先不用？
+
+先理解 React Render。
+
+之後再理解 Compiler 幫我們做了什麼。
+
+---
+
+# Tailwind CSS
+
+## Why
+
+Utility First CSS。
+
+直接把設計 Token 寫進 HTML。
+
+例如：
+
+```html
+class="flex gap-2 rounded-lg"
+```
+
+## 優點
+
+- React 生態成熟
+- Design System 友善
+- 與 Component 配合良好
+
+---
+
+# src/
+
+## Why
+
+集中所有自己的程式碼。
+
+```text
+src/
+├── app
+├── components
+├── lib
+```
+
+外層只留下：
+
+- package.json
+- README
+- config
+
+---
+
+# App Router
+
+## 核心觀念
+
+App Router
+
+不是：
+
+Router。
+
+而是：
+
+網站共同 Layout。
+
+```text
+layout
+    │
+page
+```
+
+切換頁面時：
+
+Layout 保留。
+
+只更新：
+
+```
+page.tsx
+```
+
+## Figma 對照
+
+```
+Layout Component
+        │
+        ▼
+Page Content
+```
+
+---
+
+# Import Alias
+
+官方：
+
+```
+@
+```
+
+代表：
+
+```
+src
+```
+
+例如：
+
+```tsx
+import Button from "@/components/Button"
+```
+
+不要修改。
+
+直接使用官方預設。
+
+---
+
+# AGENTS.md
+
+AI 的 README。
+
+用途：
+
+- ChatGPT
+- Codex
+- Claude
+- AI Coding Agent
+
+都能讀取：
+
+- Coding Rule
+- Naming Convention
+- Architecture
+
+---
+
+# 建立完成後
+
+專案結構：
+
+```text
+20260730-portfolio/
+
+src/
+public/
+
+package.json
+package-lock.json
+
+tsconfig.json
+next.config.ts
+eslint.config.mjs
+postcss.config.mjs
+
+README.md
+AGENTS.md
+CLAUDE.md
+```
+
+---
+
+# CLAUDE.md
+
+內容：
+
+```
+@AGENTS.md
+```
+
+代表：
+
+Claude 直接使用：
+
+```
+AGENTS.md
+```
+
+作為共同規範。
+
+避免維護兩份文件。
+
+---
+
+# 今天最重要的觀念
+
+不要只會：
+
+```bash
+npm run dev
+```
+
+而要知道：
+
+它為什麼存在。
+
+---
+
+# 學習心得
+
+本課程採用固定流程：
+
+1. Why（為什麼）
+2. What（是什麼）
+3. How（怎麼使用）
+4. Trade-off（解決了什麼？代價是什麼？）
+
+目的：
+
+建立工程思維，而不是背指令。
+
+---
+
+# 下一章
+
+Lesson 02
+
+package.json
+
+將逐行解析：
+
+- name
+- version
+- private
+- scripts
+- dependencies
+- devDependencies
+
+並回答：
+
+> 如果刪掉 package.json，整個專案會發生什麼事？
