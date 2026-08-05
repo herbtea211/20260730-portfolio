@@ -1,0 +1,429 @@
+# Lesson 11｜Sprint 0.5｜Generated Files（二）— .next 與 Build Cache
+
+> 日期：2026-08-05
+>
+> 專案：20260730-portfolio
+>
+> Sprint：Sprint 0.5 - Git Workflow
+
+---
+
+# 本章目標
+
+透過一個真實的除錯案例，理解：
+
+- `.next` 是什麼？
+- 為什麼 `.next` 不需要交給 Git？
+- Generated Files 的真正意義。
+- 如何用工程思維除錯，而不是一直重裝環境。
+
+---
+
+# 事件背景
+
+本次專案已完成：
+
+```text
+Mac
+    │
+    ▼
+Git Commit
+    │
+    ▼
+GitHub
+    │
+    ▼
+Codespaces
+```
+
+在 Codespaces 中：
+
+```bash
+npm install
+```
+
+完成後執行：
+
+```bash
+npm run dev
+```
+
+卻出現：
+
+```text
+Cannot find native binding
+
+Cannot find module
+
+@tailwindcss/oxide-linux-x64-gnu
+```
+
+畫面顯示：
+
+```text
+Build Error
+
+Error evaluating Node.js code
+```
+
+---
+
+# 第一次假設
+
+看到錯誤：
+
+```text
+Cannot find module
+```
+
+第一個直覺是：
+
+> Linux 的 node_modules 沒有建立完整。
+
+因此：
+
+重新建立：
+
+```bash
+rm -rf node_modules package-lock.json
+
+npm install
+```
+
+重新下載：
+
+```text
+added 362 packages
+```
+
+---
+
+# 驗證第一次假設
+
+確認：
+
+```bash
+npm ls @tailwindcss/oxide-linux-x64-gnu
+```
+
+結果：
+
+```text
+@tailwindcss/oxide-linux-x64-gnu@4.3.3
+```
+
+代表：
+
+Linux Binary：
+
+其實已經存在。
+
+因此：
+
+第一個假設：
+
+❌ 錯誤。
+
+---
+
+# 第二次假設
+
+既然：
+
+```text
+node_modules
+```
+
+沒有問題。
+
+開始思考：
+
+還有哪些 Generated Files？
+
+Lesson 09 已經學過：
+
+```text
+src/
+public/
+        │
+        ▼
+npm run dev
+        │
+        ▼
+.next/
+```
+
+因此：
+
+懷疑：
+
+```text
+.next
+```
+
+仍然保存第一次 Build 的快取。
+
+---
+
+# 修正方式
+
+停止開發伺服器：
+
+```bash
+Ctrl + C
+```
+
+刪除 Build Cache：
+
+```bash
+rm -rf .next
+```
+
+重新 Build：
+
+```bash
+npm run dev
+```
+
+結果：
+
+```text
+✓ Ready in 360ms
+```
+
+重新開啟：
+
+Port 3000
+
+作品集首頁正常顯示。
+
+---
+
+# 真正原因
+
+不是：
+
+```text
+node_modules
+```
+
+而是：
+
+```text
+.next
+```
+
+保存了第一次 Build 的快取。
+
+重新 Build 後：
+
+問題解決。
+
+---
+
+# 今天建立的新工程模型
+
+除了：
+
+```text
+package.json
+package-lock.json
+        │
+        ▼
+npm install
+        │
+        ▼
+node_modules
+```
+
+還多了一個：
+
+```text
+src/
+public/
+        │
+        ▼
+npm run dev
+        │
+        ▼
+.next
+```
+
+因此：
+
+```text
+node_modules
+```
+
+與：
+
+```text
+.next
+```
+
+都屬於：
+
+> Generated Files
+
+都可以重新建立。
+
+---
+
+# Source vs Generated（更新版）
+
+```text
+Source
+│
+├── src/
+├── public/
+├── docs/
+├── package.json
+└── package-lock.json
+        │
+        ▼
+Generated
+│
+├── node_modules/
+└── .next/
+```
+
+Git：
+
+只追蹤：
+
+```text
+Source
+```
+
+不追蹤：
+
+```text
+Generated
+```
+
+---
+
+# 今天真正學到的
+
+今天真正學到的不是 Tailwind。
+
+而是：
+
+不要看到錯誤：
+
+```text
+Google
+
+↓
+
+Copy
+
+↓
+
+Paste
+```
+
+而是：
+
+```text
+錯誤
+
+↓
+
+建立假設
+
+↓
+
+驗證假設
+
+↓
+
+推翻假設
+
+↓
+
+建立新的假設
+
+↓
+
+再次驗證
+
+↓
+
+找到真正原因
+```
+
+這就是：
+
+> Engineering Debugging（工程除錯）。
+
+---
+
+# 今天的除錯流程
+
+```text
+npm run dev
+
+↓
+
+Build Error
+
+↓
+
+假設：
+node_modules 有問題
+
+↓
+
+重新建立 node_modules
+
+↓
+
+再次驗證
+
+↓
+
+假設錯誤
+
+↓
+
+重新思考
+
+↓
+
+發現 .next 屬於 Generated Files
+
+↓
+
+刪除 .next
+
+↓
+
+重新 Build
+
+↓
+
+成功
+```
+
+---
+
+# 本章一句話總結
+
+> node_modules 與 .next 都是 Generated Files，可以隨時重新建立；真正重要的不是一直重裝，而是建立假設、驗證假設，最後找到真正原因。
+
+---
+
+# 關鍵字（Keywords）
+
+- Generated Files
+- Source
+- Build Cache
+- .next
+- node_modules
+- npm install
+- npm run dev
+- Next.js
+- GitHub Codespaces
+- Debugging
+- Engineering Thinking
