@@ -1,8 +1,11 @@
-import Image from "next/image";
+// import Image from "next/image";
+import Navigation from "@/components/shell/Navigation";
 
 export default function Home() {
   return (
-    <h1>home</h1>
-
+    <>
+      <Navigation/>
+    <h1>home!!~~</h1>
+    </>
   );
 }
