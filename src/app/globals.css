@@ -6,6 +6,12 @@
   --textPrimary: #2FC976;
   --textTitle: #989898;
   --primary: #31E583;
+
+  --font-weight-extraBold: 800;
+  --font-size-hero: 60px;
+  --line-height-hero: 86px;
+  --letter-spacing-hero: 20%;
+  --font-family-hero: var(--font-roboto);
 }
 
 @theme inline {
@@ -14,6 +20,12 @@
   --color-textPrimary: var(--textPrimary);
   --color-textTitle: var(--textTitle);
   --color-primary: var(--primary);
+
+  --font-hero: var(--font-family-hero);
+  --font-weight-extraBold: var(--font-weight-extraBold);
+  --text-hero: var(--font-size-hero);
+  --leading-hero: var(--line-height-hero);
+  --tracking-hero: var(--letter-spacing-hero);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -28,5 +40,5 @@
 body {
   background: var(--background);
   color: var(--textColor);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto);
 }
