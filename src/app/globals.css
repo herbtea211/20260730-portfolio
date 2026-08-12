@@ -7,11 +7,18 @@
   --textTitle: #989898;
   --primary: #31E583;
 
+  --font-family-hero: var(--font-roboto);
+
   --font-weight-extraBold: 800;
   --font-size-hero: 60px;
   --line-height-hero: 86px;
   --letter-spacing-hero: 20%;
-  --font-family-hero: var(--font-roboto);
+
+  --font-weight-Medium: 500;
+  --font-size-subContent: 20px;
+  --line-height-subContent: 32px;
+  --letter-spacing-subContent: 12%;
+
 }
 
 @theme inline {
@@ -26,6 +33,13 @@
   --text-hero: var(--font-size-hero);
   --leading-hero: var(--line-height-hero);
   --tracking-hero: var(--letter-spacing-hero);
+
+  --font-weight-Medium: var(--font-weight-Medium);
+  --text-subContent: var(---font-size-subContent);
+  --leading-subContent: var(--line-height-subContent);
+  --tracking-subContent: var(--letter-spacing-subContent);
+
+
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
