@@ -1,0 +1,1508 @@
+# Lesson 12｜Sprint 0.7｜Portfolio UI Engineering Foundation
+
+> 日期：2026-08-09
+>
+> 專案：20260730-portfolio
+>
+> Sprint：Sprint 0.7 - UI Engineering Foundation
+
+---
+
+# 本章目標
+
+本章開始從 Git / Repository Workflow 進入：
+
+> Portfolio UI 的實際工程實作。
+
+主要建立：
+
+- Component 結構
+- Navigation
+- Container
+- 靜態資料與 Component 分離
+- Tailwind CSS 基礎使用
+- Design Token 基礎
+- CSS Variable → Tailwind Theme → React 的關係
+- Responsive Layout 的基本觀念
+
+---
+
+# 01｜Project Structure
+
+目前 `src` 下已建立：
+
+```text
+src/
+├── app/
+├── components/
+│   └── shell/
+│       ├── Container.tsx
+│       └── Navigation.tsx
+│
+├── data/
+│   └── navigation.ts
+│
+├── assets/
+├── lib/
+└── types/
+
+# Portfolio Engineering Learning Log
+
+> 專案：20260730-portfolio
+>
+> 目前進度：Sprint 0.7
+>
+> 說明：本文件整合目前已完成的工程學習與實作進度，作為後續教學的上下文紀錄。
+
+---
+
+# Lesson 02｜Portfolio Project Foundation
+
+## 本章目標
+
+建立 Portfolio Website 的基本工程環境，確認：
+
+- Next.js
+- React
+- TypeScript
+- Git
+- GitHub
+- GitHub Codespaces
+
+之間的基本關係。
+
+---
+
+# Lesson 03｜Project Architecture
+
+建立 Portfolio 的基本工程架構。
+
+核心原則：
+
+- Component First
+- Reuse First
+- Page-driven routing
+- Separation of concerns
+- Documentation First
+- Single Source of Truth
+
+Project Structure：
+
+```text
+src/
+├── app/
+├── components/
+├── data/
+├── assets/
+├── lib/
+└── types/
+Lesson 04｜Component Architecture
+
+開始理解 React Component 的基本責任。
+
+核心原則：
+
+Component 負責 UI 與行為，不負責管理大量靜態資料。
+
+因此逐步建立：
+
+Data
+  ↓
+Component
+  ↓
+UI
+
+例如 Navigation：
+
+navigation.ts
+        ↓
+Navigation.tsx
+        ↓
+Page
+Lesson 05｜React / JSX 基礎
+JSX
+
+React Component 使用 JSX：
+
+export default function Home() {
+  return (
+    <>
+      <Navigation />
+      <h1>home!!</h1>
+    </>
+  );
+}
+React Fragment
+<>
+  ...
+</>
+
+用途：
+
+在不額外產生 DOM Element 的情況下，包住多個 JSX Element。
+
+Lesson 06｜Import / Export
+
+理解：
+
+export
+
+與：
+
+import
+
+的關係。
+
+例如：
+
+export const navigation = [
+  ...
+];
+
+其他檔案：
+
+import { navigation } from "@/data/navigation";
+Lesson 07｜Path Alias
+
+確認：
+
+@/
+
+代表：
+
+src/
+
+因此：
+
+import Navigation from "@/components/shell/Navigation";
+
+代表：
+
+src/components/shell/Navigation
+
+而不是：
+
+../../components/shell/Navigation
+
+這樣可以讓檔案路徑更加清楚。
+
+Lesson 08｜Navigation Component
+
+建立：
+
+src/components/shell/Navigation.tsx
+
+Navigation 作為 Global Component。
+
+目前：
+
+src/components/shell/
+├── Navigation.tsx
+└── Container.tsx
+
+Navigation 的靜態資料獨立：
+
+src/data/navigation.ts
+Lesson 09｜Navigation Data
+
+建立：
+
+src/data/navigation.ts
+
+目前資料：
+
+export const navigation = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Works",
+    href: "/works",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Resume",
+    href: "/resume",
+  },
+];
+
+架構：
+
+navigation.ts
+      ↓
+Navigation.tsx
+      ↓
+Home
+
+這建立了：
+
+Data 與 UI 分離。
+
+Lesson 10｜Container
+
+建立：
+
+src/components/shell/Container.tsx
+
+目前：
+
+export default function Container({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="mx-auto">
+      {children}
+    </div>
+  );
+}
+
+目前 Container 的唯一責任：
+
+水平置中。
+
+暫時不加入：
+
+max-width
+padding
+breakpoint
+Lesson 10｜RWD Layout Concept
+
+Figma 的：
+
+1440px
+
+是設計時使用的 Frame / Viewport。
+
+不直接代表網站必須：
+
+max-width: 1440px;
+
+因此目前只使用：
+
+className="mx-auto"
+
+核心概念：
+
+Figma Frame Width ≠ Website Container Width。
+
+RWD 的 Layout 規則應由實際產品需求決定，而不是直接複製 Figma Frame 尺寸。
+
+Lesson 10｜Tailwind CSS
+
+開始使用 Tailwind CSS。
+
+目前使用：
+
+flex
+gap-8
+py-12
+items-center
+justify-center
+mx-auto
+
+基本對應：
+
+flex
+→ display: flex
+
+gap-8
+→ 32px gap
+
+py-12
+→ padding-top / padding-bottom: 48px
+
+mx-auto
+→ margin-left / margin-right: auto
+
+items-center
+→ Cross Axis 對齊置中
+
+justify-center
+→ Main Axis 對齊置中
+
+由於已有 CSS 基礎，後續不需要逐一解釋 Tailwind 基礎語法。
+
+教學方式：
+
+直接提供需要的 Tailwind class，有問題再解釋。
+
+Lesson 10｜Navigation Layout
+
+目前 Navigation 的結構：
+
+Navigation
+└── Container
+    └── ul
+        ├── Home
+        ├── Works
+        ├── About
+        └── Resume
+
+目前 Navigation Items 使用：
+
+<ul className="flex gap-8">
+
+效果：
+
+Home   Works   About   Resume
+
+水平排列。
+
+項目間距：
+
+32px
+
+Navigation 高度目前使用：
+
+py-12
+
+上下：
+
+48px
+Lesson 10｜Alignment Responsibility
+
+目前最後決定的 Layout 方向：
+
+<nav className="py-12">
+  <Container>
+    <ul className="flex justify-center gap-8">
+      ...
+    </ul>
+  </Container>
+</nav>
+
+責任分工：
+
+nav
+└── py-12
+    ↓
+Navigation 區域上下空間
+
+Container
+└── mx-auto
+    ↓
+Container 水平置中
+
+ul
+├── flex
+├── justify-center
+└── gap-8
+    ↓
+Navigation Items 排列、置中、間距
+
+目前這個調整是下一步開始時要確認的項目。
+
+Lesson 11｜Sprint 0.6｜Local Repository 與 Remote Repository
+
+日期：2026-08-05
+
+Sprint：Sprint 0.6 - Cloud Development Workflow
+
+本章目標
+
+建立：
+
+Local Repository 與 Remote Repository 的完整模型。
+
+真正需求：
+
+任何一台只有瀏覽器的電腦
+        ↓
+也可以開發
+
+例如：
+
+網咖
+圖書館
+公司臨時電腦
+
+因此：
+
+專案不能只存在自己的 Mac。
+
+Git Workflow
+
+完整流程：
+
+Coding
+    │
+    ▼
+⌘ + S
+    │
+    ▼
+Hard Disk
+
+──────────────
+
+git add
+    │
+    ▼
+Staging Area
+
+──────────────
+
+git commit
+    │
+    ▼
+Local Repository
+
+──────────────
+
+git push
+    │
+    ▼
+Remote Repository（GitHub）
+
+每一步都有不同職責。
+
+Save
+
+作用：
+
+把檔案寫進 SSD / Hard Disk。
+
+不是：
+
+Git。
+
+真正的 Save：
+
+⌘ + S
+git add
+
+作用：
+
+把變更放進 Staging Area，準備建立下一個 Commit。
+
+不是：
+
+Commit
+Backup
+Push
+
+流程：
+
+Untracked / Modified
+        │
+     git add
+        ▼
+Changes to be committed
+git commit
+
+作用：
+
+建立一個新的歷史 Snapshot。
+
+例如：
+
+Version 1
+    ↓
+Version 2
+    ↓
+Version 3
+
+Git 管理的是：
+
+Version History。
+
+而不是單純的檔案。
+
+git push
+
+作用：
+
+把 Local Repository 的 Commit 同步到 Remote Repository。
+
+不是：
+
+建立 Commit。
+
+Local Repository
+
+位於：
+
+自己的電腦。
+
+例如：
+
+MacBook
+
+Commit：
+
+fa9a618
+
+存在：
+
+Local Repository。
+
+Remote Repository
+
+位於：
+
+GitHub 等遠端 Git Server。
+
+例如：
+
+herbtea211/20260730-portfolio
+
+Remote Repository 不等於 GitHub。
+
+GitHub 只是其中一種 Remote Hosting。
+
+其他可能包括：
+
+GitHub
+GitLab
+Bitbucket
+Self-hosted Git Server
+Remote
+
+Remote 是：
+
+Local Repository 與另一個 Repository 之間的連線資訊。
+
+例如：
+
+origin
+    ↓
+git@github.com:herbtea211/20260730-portfolio.git
+
+Remote 不是 Repository 本身。
+
+Remote 是：
+
+Repository 的連線名稱與位置。
+
+origin
+
+origin：
+
+不是 Git 規定的名稱。
+
+只是：
+
+最常見的 Remote 預設名稱。
+
+例如下面都合法：
+
+origin
+github
+company
+backup
+
+業界大量使用：
+
+origin
+
+是因為大部分專案只有一個主要 Remote，因此形成約定俗成。
+
+git remote add
+
+建立 Local Repository 與 Remote Repository 的連線：
+
+git remote add origin git@github.com:herbtea211/20260730-portfolio.git
+
+拆開：
+
+git
+ ↓
+remote
+ ↓
+add
+ ↓
+origin
+ ↓
+Repository URL
+
+意思：
+
+新增一個叫做 origin 的 Remote，位置是指定的 Git Repository。
+
+git remote -v
+
+用途：
+
+查看目前有哪些 Remote。
+
+例如：
+
+origin
+    ↓
+fetch
+    ↓
+push
+fetch
+
+用途：
+
+從 Remote 下載最新的 Repository 資訊。
+
+目前只需要理解：
+
+fetch
+↓
+下載
+
+之後再深入。
+
+push
+
+用途：
+
+把 Local Repository 同步到 Remote Repository。
+
+第一次：
+
+git push -u origin main
+-u
+
+完整名稱：
+
+--set-upstream
+
+用途：
+
+建立：
+
+main
+  ↓
+origin/main
+
+的預設關係。
+
+因此之後可以：
+
+git push
+
+Git 就知道：
+
+main
+ ↓
+origin/main
+Repository / Branch / Commit / Remote
+
+這四個概念不要混在一起。
+
+Repository
+    ↓
+Branch
+    ↓
+Commit
+
+Remote
+    ↓
+連接另一個 Repository
+
+例如：
+
+Repository
+    ↓
+main
+    ↓
+863f82e
+
+Remote
+    ↓
+origin
+    ↓
+GitHub
+Git 工程思維
+
+Git：
+
+Version Control System。
+
+不是：
+
+存檔工具。
+
+GitHub：
+
+Remote Repository Hosting。
+
+不是單純：
+
+備份空間。
+
+Push：
+
+Repository Synchronization。
+
+不是：
+
+存檔。
+
+My Misconceptions
+誤區一：Commit 就是存檔
+
+原本：
+
+git commit
+    ↓
+存檔
+
+修正：
+
+⌘ + S
+    ↓
+儲存檔案
+
+git commit
+    ↓
+建立歷史 Snapshot
+誤區二：origin 就是 GitHub
+
+原本：
+
+origin
+    ↓
+GitHub
+
+修正：
+
+origin
+    ↓
+Remote Name
+    ↓
+Repository URL
+
+GitHub 只是 Remote Repository 的其中一種 Hosting。
+
+誤區三：git push 是 Git 最後一步
+
+原本：
+
+Push
+ ↓
+完成
+
+修正：
+
+Push
+ ↓
+Remote Repository 更新
+ ↓
+其他環境取得最新 Repository
+ ↓
+Cloud Development
+
+Push：
+
+是 Cloud Workflow 的開始，而不是 Git 的「最後一步」。
+
+Lesson 11 一句話總結
+
+Git 管理版本；Local Repository 保存本機歷史；Remote Repository 保存共享歷史；Push 負責同步兩者，讓不同環境可以取得最新版本。
+
+Lesson 12｜Sprint 0.7｜Portfolio UI Engineering Foundation
+
+日期：2026-08-09
+
+Sprint：Sprint 0.7 - UI Engineering Foundation
+
+本章目標
+
+從 Git / Repository Workflow 進入：
+
+Portfolio UI 的實際工程實作。
+
+主要建立：
+
+Component Architecture
+Navigation
+Container
+Data Separation
+Tailwind CSS
+Design Token
+CSS Variable
+Tailwind Theme
+React Component
+Responsive Layout 基礎概念
+01｜Component Architecture
+
+目前：
+
+src/
+├── app/
+├── components/
+├── data/
+├── assets/
+├── lib/
+└── types/
+
+Components：
+
+src/components/
+└── shell/
+    ├── Container.tsx
+    └── Navigation.tsx
+
+Data：
+
+src/data/
+└── navigation.ts
+02｜Navigation Data
+
+Navigation 的資料獨立於 Component：
+
+export const navigation = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Works",
+    href: "/works",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Resume",
+    href: "/resume",
+  },
+];
+
+架構：
+
+Data
+ ↓
+Component
+ ↓
+UI
+03｜Import / Path Alias
+
+目前使用：
+
+import Navigation from "@/components/shell/Navigation";
+
+其中：
+
+@/
+
+代表：
+
+src/
+
+因此：
+
+@/components/shell/Navigation
+
+就是：
+
+src/components/shell/Navigation
+
+這比：
+
+../../../../components/...
+
+更加清楚。
+
+04｜Container
+
+目前：
+
+export default function Container({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="mx-auto">
+      {children}
+    </div>
+  );
+}
+
+目前責任：
+
+水平置中。
+
+暫時不加入：
+
+max-width
+padding
+breakpoint
+05｜Figma Frame 與 RWD
+
+Figma 的：
+
+1440px
+
+只是設計 Frame。
+
+不代表：
+
+max-width: 1440px;
+
+因此目前：
+
+mx-auto
+
+即可。
+
+核心：
+
+Figma 設計尺寸不是直接等於工程 Layout 規則。
+
+06｜React Fragment
+
+使用：
+
+<>
+  <Navigation />
+  <h1>home!!</h1>
+</>
+
+Fragment 不會額外產生 DOM Element。
+
+07｜Tailwind 教學方式
+
+因為已具備 CSS 基礎：
+
+Tailwind 直接使用，不逐一教 CSS 對應。
+
+目前已理解：
+
+flex
+gap-8
+py-12
+items-center
+justify-center
+mx-auto
+
+後續：
+
+有問題再問。
+
+08｜Navigation Layout
+
+目前：
+
+<nav className="py-12">
+  <Container>
+    <ul className="flex justify-center gap-8">
+      ...
+    </ul>
+  </Container>
+</nav>
+
+責任：
+
+nav
+└── py-12
+    ↓
+上下空間
+
+Container
+└── mx-auto
+    ↓
+水平置中
+
+ul
+├── flex
+├── justify-center
+└── gap-8
+    ↓
+Items 排列與置中
+09｜Design Token
+
+開始建立 Design Token。
+
+目前 Color Token：
+
+:root {
+  --background: #0B0E0B;
+  --textColor: #ffffff;
+  --textPrimary: #2FC976;
+  --textTitle: #989898;
+  --primary: #31E583;
+}
+
+目前：
+
+只處理 Color。
+
+Typography：
+
+暫時不處理。
+
+10｜Color Token 命名
+
+目前決定：
+
+採用 camelCase。
+
+例如：
+
+textColor
+textPrimary
+textTitle
+
+目前不使用：
+
+text-color
+text-primary
+text-title
+11｜Design Token 核心原則
+
+核心原則：
+
+Component 使用 Design Token，而不是直接散落具體設計值。
+
+不希望：
+
+className="text-[#31E583]"
+
+而是：
+
+className="text-primary"
+
+架構：
+
+Design Token
+    ↓
+Tailwind
+    ↓
+Component
+
+Component 使用設計角色，而不是直接知道實際色碼。
+
+12｜CSS Variable
+
+例如：
+
+:root {
+  --primary: #31E583;
+}
+
+這是 CSS Variable。
+
+可以直接在 CSS 使用：
+
+color: var(--primary);
+
+因此：
+
+CSS Token
+ ↓
+CSS
+
+是完全合法的。
+
+13｜Tailwind @theme
+
+目前：
+
+@theme inline {
+  --color-background: var(--background);
+  --color-textColor: var(--textColor);
+  --color-textPrimary: var(--textPrimary);
+  --color-textTitle: var(--textTitle);
+  --color-primary: var(--primary);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme 的作用：
+
+將 Token 接到 Tailwind Theme，讓 Tailwind 可以依照 Token 名稱產生對應的 utility。
+
+例如：
+
+--color-primary: var(--primary);
+
+之後可以使用：
+
+text-primary
+bg-primary
+border-primary
+14｜Token Pipeline
+
+目前理解：
+
+CSS Variable
+    ↓
+@theme
+    ↓
+Tailwind Theme
+    ↓
+Tailwind Utility
+    ↓
+React Component
+
+例如：
+
+--primary
+    ↓
+--color-primary
+    ↓
+text-primary
+    ↓
+React Component
+15｜Global CSS
+
+目前：
+
+body {
+  background: var(--background);
+  color: var(--textColor);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+因此：
+
+網站預設背景
+→ --background
+
+網站預設文字顏色
+→ --textColor
+
+這已經實際驗證成功。
+
+因此：
+
+不需要為了使用 Tailwind 而把 Global CSS 全部改成 Tailwind。
+
+CSS Token 可以直接被 Global CSS 使用。
+
+16｜Next.js 預設 Dark Mode
+
+原本 Next.js：
+
+@media (prefers-color-scheme: dark)
+
+會根據使用者系統 Dark Mode 改變背景與文字。
+
+目前 Portfolio 有自己的深色設計，因此已經註解掉：
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
+
+避免系統設定覆蓋自己的設計。
+
+17｜目前 Color Token
+
+目前：
+
+--background
+--textColor
+--textPrimary
+--textTitle
+--primary
+
+對應：
+
+#0B0E0B
+#ffffff
+#2FC976
+#989898
+#31E583
+
+Typography 暫不處理。
+
+18｜Design Token 尚未定義的部分
+
+Portfolio Engineering Guideline 的 Design System Foundation：
+
+Color
+Typography
+Spacing
+Radius
+Shadow
+Grid
+Icon
+
+目前已開始處理：
+
+Color
+
+尚未處理：
+
+Typography
+Spacing
+Radius
+Shadow
+Grid
+Icon
+19｜Portfolio Engineering Guideline
+
+目前確認：
+
+Portfolio Engineering Guideline 是 Portfolio Project 的 Primary AI Context Document。
+
+用途：
+
+Project Architecture
+Engineering Standards
+Figma Standards
+Design System
+Component Library
+Development Workflow
+Documentation Rules
+AI Collaboration Rules
+20｜Design System
+
+目前 Guideline 定義 Foundation：
+
+Color
+Typography
+Spacing
+Radius
+Shadow
+Grid
+Icon
+
+目前 Guideline 尚未定義 Color Token 的具體命名格式。
+
+因此：
+
+Color Token 採 camelCase 是目前已做出的實作決策。
+
+後續應同步更新 Guideline。
+
+21｜Component Naming
+
+目前遵守：
+
+Single Source Naming。
+
+名稱應盡量保持一致於：
+
+Figma
+React
+Documentation
+AI
+
+Component 以：
+
+Responsibility
+
+而不是：
+
+Appearance
+
+命名。
+
+例如：
+
+Navigation
+Container
+
+而不是：
+
+GreenBar
+TopThing
+22｜Current Engineering Architecture
+
+目前整體工程鏈：
+
+Figma
+   ↓
+Design Decision
+   ↓
+Design Token
+   ↓
+Component
+   ↓
+Tailwind
+   ↓
+Next.js
+   ↓
+Git
+   ↓
+GitHub
+
+核心目標：
+
+Keep Design and Code Synchronized。
+
+23｜Git Checkpoint
+
+目前已建立 Git Checkpoint：
+
+Commit:
+863f82e
+
+Message:
+feat: add navigation structure
+
+內容：
+
+4 files changed
+64 insertions
+3 deletions
+
+新增：
+
+src/components/shell/Container.tsx
+src/components/shell/Navigation.tsx
+src/data/navigation.ts
+
+修改：
+
+src/app/page.tsx
+24｜Git Push
+
+已成功：
+
+git push
+
+結果：
+
+5fe074b..863f82e  main -> main
+
+因此：
+
+Local Repository
+      ↓
+    push
+      ↓
+Remote Repository
+      ↓
+GitHub
+
+已同步成功。
+
+25｜目前 Git Model
+
+完整：
+
+Working Directory
+        ↓
+     git add
+        ↓
+Staging Area
+        ↓
+    git commit
+        ↓
+Local Repository
+        ↓
+     git push
+        ↓
+Remote Repository
+
+核心理解：
+
+Commit 建立版本 Snapshot。
+
+Push 同步 Repository。
+
+26｜目前專案狀態
+
+目前專案已從：
+
+Next.js 初始專案
+
+進入：
+
+Next.js
++
+Component Architecture
++
+Data Separation
++
+Tailwind
++
+Design Token
++
+Git Workflow
++
+GitHub Remote
+27｜目前尚未完成
+
+目前尚未完成：
+
+Typography Token
+完整 Design Token 規範
+Spacing Token
+Radius Token
+Shadow Token
+Grid Token
+Icon Token
+Navigation 完整 UI
+Responsive Breakpoints
+Navigation Link Styling
+GitHub Codespaces 深入 Workflow
+下一步
+
+下一步從 Navigation Layout 繼續：
+
+<nav className="py-12">
+  <Container>
+    <ul className="flex justify-center gap-8">
+      ...
+    </ul>
+  </Container>
+</nav>
+
+先確認：
+
+Navigation Layout 是否正確。
+
+之後再進入下一個 UI Engineering 階段。
+
+教學模式
+
+目前採用：
+
+教學模式。
+
+使用者具備 CSS 基礎，因此：
+
+Tailwind 基礎快速帶過
+不重複解釋已理解的 CSS
+直接提供下一步需要的內容
+使用者自行實作
+遇到問題再深入解釋
+概念問題優先於語法問題
+不預先過度工程化
+不擴張目前沒有必要的架構
+本階段一句話總結
+
+建立 Portfolio 的 UI Engineering 基礎：以 Component 為核心、Data 與 UI 分離、使用 Tailwind 建立 Layout、以 Design Token 管理設計值，並透過 Git / GitHub 管理工程版本。
+
+Keywords
+Next.js
+React
+TypeScript
+TSX
+JSX
+React Fragment
+Component Architecture
+Navigation
+Container
+Data Separation
+Path Alias
+Tailwind CSS
+Flexbox
+RWD
+Design Token
+CSS Variable
+@theme
+Color Token
+camelCase
+Typography
+Local Repository
+Remote Repository
+Repository
+Branch
+Commit
+Snapshot
+Staging Area
+Git Push
+Git Fetch
+Origin
+Upstream
+Version Control
+GitHub

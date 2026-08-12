@@ -1,3 +1,8 @@
 export default function WorksPage () {
-    return <h1>works</h1>
+    return (
+        <>
+            <h1>works</h1>
+        </>
+
+    )
 }
