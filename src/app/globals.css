@@ -10,14 +10,43 @@
   --font-family-hero: var(--font-roboto);
 
   --font-weight-extraBold: 800;
+  --font-weight-bold: 700;
+  --font-weight-Medium: 500;
+
+  /* hero=>hero */
   --font-size-hero: 60px;
   --line-height-hero: 86px;
   --letter-spacing-hero: 20%;
 
-  --font-weight-Medium: 500;
+/* pointContent=>point */
+  --font-size-point: 36px;
+  --line-height-point: 48px;
+  --letter-spacing-point: 8%;
+
+/* sectionTitle=>sectionTitle */
+  --font-size-sectionTitle: 40px;
+  --line-height-sectionTitle: 56px;
+  --letter-spacing-sectionTitle: 12%;
+
+/* contentTitle=>subSectionTitle */
+  --font-size-subSectionTitle: 32px;
+  --line-height-subSectionTitle: 48px;
+  --letter-spacing-subSectionTitle: 8%;
+
+/* contentSub=>subContent */
   --font-size-subContent: 20px;
   --line-height-subContent: 32px;
   --letter-spacing-subContent: 12%;
+
+ /* companyTitle=>companyTitle */
+  --font-size-companyTitle: 16px;
+  --line-height-companyTitle: 32px;
+  --letter-spacing-companyTitle: 12%;
+
+ /* content=>content */
+  --font-size-content: 16px;
+  --line-height-content: 24px;
+  --letter-spacing-content: 15%; 
 
 }
 
@@ -29,16 +58,45 @@
   --color-primary: var(--primary);
 
   --font-hero: var(--font-family-hero);
+
   --font-weight-extraBold: var(--font-weight-extraBold);
+  --font-weight-bold: var(--font-weight-bold);
+  --font-weight-Medium: var(--font-weight-Medium);
+
+  /* hero=>hero */
   --text-hero: var(--font-size-hero);
   --leading-hero: var(--line-height-hero);
   --tracking-hero: var(--letter-spacing-hero);
 
-  --font-weight-Medium: var(--font-weight-Medium);
+  /* pointContent=>point */
+  --text-point: var(---font-size-point);
+  --leading-point: var(--line-height-point);
+  --tracking-point: var(--letter-spacing-point);
+
+  /* sectionTitle=>sectionTitle */
+  --text-sectionTitle: var(---font-size-sectionTitle);
+  --leading-sectionTitle: var(--line-height-sectionTitle);
+  --tracking-sectionTitle: var(--letter-spacing-sectionTitle);
+
+    /* sectionTitle=>subSectionTitle */
+  --text-subSectionTitle: var(---font-size-subSectionTitle);
+  --leading-subSectionTitle: var(--line-height-subSectionTitle);
+  --tracking-subSectionTitle: var(--letter-spacing-subSectionTitle);
+
+  /* contentSub=>subContent */
   --text-subContent: var(---font-size-subContent);
   --leading-subContent: var(--line-height-subContent);
   --tracking-subContent: var(--letter-spacing-subContent);
 
+ /* companyTitle=>companyTitle */
+  --text-companyTitle: var(---font-size-companyTitle);
+  --leading-companyTitle: var(--line-height-companyTitle);
+  --tracking-companyTitle: var(--letter-spacing-companyTitle);
+
+ /* content=>content */
+  --text-content: var(---font-size-content);
+  --leading-content: var(--line-height-content);
+  --tracking-content: var(--letter-spacing-content);
 
 
   --font-sans: var(--font-geist-sans);
