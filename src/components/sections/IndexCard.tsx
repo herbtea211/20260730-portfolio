@@ -9,23 +9,27 @@ export default function IndexCard() {
         <>
             {indexCardData.map((item) => {
                 return (
-                        <div key={item.title}>
+                        <div
+                        key={item.title}
+                        className="flex items-start gap-8"
+                        >
                             <Image
                                 src={item.image}
                                 alt={item.title}
                             />
                             <div>
-                                <h2>{item.title}</h2>
-                                <p>{item.subtitle}</p>
+                                <div>
+                                    <h2>{item.title}</h2>
+                                    <p>{item.subtitle}</p>
+                                </div>
+                                <div>
+                                    <p>{item.role}</p>
+                                    <p>{item.description}</p>
+                                    <p>{item.platform}</p>
+                                </div>
+                                <Button showLabel={false} label=""/>
                             </div>
-                            <div>
-                                <p>{item.role}</p>
-                                <p>{item.description}</p>
-                                <p>{item.platform}</p>
-                            </div>
-                            <Button showLabel={true} label="專案"/>
                         </div>
-
                 )
             })}
         </>
