@@ -53,7 +53,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-textColor: var(--textColor);
-  --color-textPrimary: var(--textPrimary);
+  --color-textPrimaryColor: var(--textPrimary);
   --color-textTitle: var(--textTitle);
   --color-primary: var(--primary);
 
