@@ -1,0 +1,189 @@
+Lesson 13｜Typography Engineering｜Next.js Font 與 Typography Token
+
+日期：2026-08-15
+專案：20260730-portfolio
+
+本章目標
+
+將 Portfolio 的字體從單純的 CSS Font Family，進一步建立成：
+
+Next.js Font
+    ↓
+CSS Variable
+    ↓
+Design Token
+    ↓
+Tailwind Theme
+    ↓
+Typography Utility
+    ↓
+Component
+01｜Next.js Font
+
+使用 Next.js 的 next/font 導入 Roboto。
+
+核心概念：
+
+Roboto
+  ↓
+CSS Variable
+  ↓
+--font-roboto
+
+HTML：
+
+<html className={roboto.variable}>
+
+讓 Next.js 將 Roboto 的 CSS Variable 注入頁面。
+
+CSS：
+
+body {
+  font-family: var(--font-roboto);
+}
+
+因此網站的預設字體不再依賴：
+
+Arial, Helvetica, sans-serif;
+
+而是使用專案指定的 Roboto。
+
+02｜Font Variable 與 Tailwind
+
+將 Roboto 接進 Tailwind Theme：
+
+@theme inline {
+  --font-hero: var(--font-family-hero);
+}
+
+並在 :root：
+
+--font-family-hero: var(--font-roboto);
+
+形成：
+
+Roboto
+ ↓
+--font-roboto
+ ↓
+--font-family-hero
+ ↓
+--font-hero
+ ↓
+font-hero
+
+Component 可以直接：
+
+<h1 className="font-hero">
+03｜Typography Token
+
+開始建立 Typography Token。
+
+例如 Hero：
+
+--font-weight-extraBold: 800;
+
+
+--font-size-hero: 60px;
+--line-height-hero: 86px;
+--letter-spacing-hero: 20%;
+
+再接到 Tailwind：
+
+--text-hero: var(--font-size-hero);
+--leading-hero: var(--line-height-hero);
+--tracking-hero: var(--letter-spacing-hero);
+
+Component：
+
+<h1 className="
+  font-hero
+  font-extraBold
+  text-hero
+  leading-hero
+  tracking-hero
+">
+04｜Typography 的 Token 結構
+
+目前建立的 Typography 類型包含：
+
+hero
+point
+sectionTitle
+subSectionTitle
+subContent
+companyTitle
+content
+
+每一組 Typography 都由：
+
+font-size
+line-height
+letter-spacing
+font-weight
+
+共同決定。
+
+05｜Font Weight
+
+Roboto 的字重開始建立 Token：
+
+--font-weight-extraBold: 800;
+--font-weight-bold: 700;
+--font-weight-Medium: 500;
+
+Tailwind 使用時：
+
+font-extraBold
+font-bold
+font-Medium
+
+特別注意：
+
+--font-weight-bold
+
+產生的是：
+
+font-bold
+
+而不是：
+
+font-weight-bold
+
+這次實作中也實際驗證了這個規則。
+
+06｜Typography Token 的錯誤除錯
+
+實作過程中發現：
+
+var(---font-size-point)
+
+是錯誤的。
+
+正確：
+
+var(--font-size-point)
+
+多一個 - 就會造成 CSS Variable 引用失效。
+
+這也再次驗證：
+
+Design Token 的命名與引用必須完全一致。
+
+本章核心觀念
+
+這次開始不只是「設定字體」，而是建立完整的 Typography Pipeline：
+
+Design Specification
+        ↓
+Typography Token
+        ↓
+CSS Variable
+        ↓
+Tailwind @theme
+        ↓
+Utility Class
+        ↓
+React Component
+
+這是今天後續 Button、Hero、IndexCard 都會共用的基礎。
