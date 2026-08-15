@@ -23,7 +23,7 @@ export default function IndexCard() {
                                 <p>{item.description}</p>
                                 <p>{item.platform}</p>
                             </div>
-                            <Button showLabel={false} />
+                            <Button showLabel={true} label="專案"/>
                         </div>
 
                 )

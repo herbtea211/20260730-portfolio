@@ -69,32 +69,32 @@
   --tracking-hero: var(--letter-spacing-hero);
 
   /* pointContent=>point */
-  --text-point: var(---font-size-point);
+  --text-point: var(--font-size-point);
   --leading-point: var(--line-height-point);
   --tracking-point: var(--letter-spacing-point);
 
   /* sectionTitle=>sectionTitle */
-  --text-sectionTitle: var(---font-size-sectionTitle);
+  --text-sectionTitle: var(--font-size-sectionTitle);
   --leading-sectionTitle: var(--line-height-sectionTitle);
   --tracking-sectionTitle: var(--letter-spacing-sectionTitle);
 
     /* sectionTitle=>subSectionTitle */
-  --text-subSectionTitle: var(---font-size-subSectionTitle);
+  --text-subSectionTitle: var(--font-size-subSectionTitle);
   --leading-subSectionTitle: var(--line-height-subSectionTitle);
   --tracking-subSectionTitle: var(--letter-spacing-subSectionTitle);
 
   /* contentSub=>subContent */
-  --text-subContent: var(---font-size-subContent);
+  --text-subContent: var(--font-size-subContent);
   --leading-subContent: var(--line-height-subContent);
   --tracking-subContent: var(--letter-spacing-subContent);
 
  /* companyTitle=>companyTitle */
-  --text-companyTitle: var(---font-size-companyTitle);
+  --text-companyTitle: var(--font-size-companyTitle);
   --leading-companyTitle: var(--line-height-companyTitle);
   --tracking-companyTitle: var(--letter-spacing-companyTitle);
 
  /* content=>content */
-  --text-content: var(---font-size-content);
+  --text-content: var(--font-size-content);
   --leading-content: var(--line-height-content);
   --tracking-content: var(--letter-spacing-content);
 
