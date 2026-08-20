@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroBackground from "@/assets/image/about/page-hero-BG.png";
+import JourneyStage from "@/components/sections/aboutSectionJourneyStage"
 
 export default function AboutPage() {
   return (
@@ -80,6 +81,9 @@ export default function AboutPage() {
         <h2 className="pt-50 pb-50 text-center text-primary font-weight-extraBold text-sectionTitle leading-sectionTitle tracking-sectionTitle">
           我如何一步步成為 Product Designer
         </h2>
+      </section>
+      <section>
+        <JourneyStage/>
       </section>
     </main>
   );

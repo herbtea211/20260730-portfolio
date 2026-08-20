@@ -2,7 +2,8 @@ export const stages = [
   {
     number: "01",
     title: "Visual Foundation",
-    description: "掌握視覺設計，建立完整的視覺設計基礎。",
+    description: "學會透過設計，有效傳達資訊",
+    company: "捷達珠寶",
     learnings: [
       "Graphic Design",
       "Brand Identity",
@@ -15,7 +16,8 @@ export const stages = [
   {
     number: "02",
     title: "Interface Thinking",
-    description: "從視覺設計走向介面設計，開始理解互動與系統。",
+    description: "開始思考數位產品，而不只是視覺設計",
+    company: "尚青雲端",
     learnings: [
       "UI Design",
       "User Flow",
@@ -28,7 +30,8 @@ export const stages = [
   {
     number: "03",
     title: "Technical Thinking",
-    description: "理解產品如何被實際打造，開始建立工程思維。",
+    description: "理解產品如何被打造，開始以工程思維思考設計",
+    company: "遊戲河流",
     learnings: [
       "HTML / CSS",
       "Javascript",
@@ -41,7 +44,8 @@ export const stages = [
   {
     number: "04",
     title: "Product Thinking",
-    description: "開始從產品角度思考問題，而不只是設計畫面。",
+    description: "開始從使用者、產品與商業角度思考，而不只是設計介面",
+    company: "露天市集",
     learnings: [
       "User Research",
       "UX Design",
@@ -54,7 +58,8 @@ export const stages = [
   {
     number: "05",
     title: "Continuous Evolution",
-    description: "持續整合設計、技術與產品思維，建立完整的工作方法。",
+    description: "持續整合研究、策略與系統思維，打造真正解決問題的產品",
+    company: "維次三維＆個人產品：配配方",
     learnings: [
       "Systems Thinking",
       "Product Strategy",
