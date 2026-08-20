@@ -1,0 +1,67 @@
+export const stages = [
+  {
+    number: "01",
+    title: "Visual Foundation",
+    description: "掌握視覺設計，建立完整的視覺設計基礎。",
+    learnings: [
+      "Graphic Design",
+      "Brand Identity",
+      "Typography",
+      "Color Theory",
+      "Print Production",
+    ],
+    diagonalLine: false,
+  },
+  {
+    number: "02",
+    title: "Interface Thinking",
+    description: "從視覺設計走向介面設計，開始理解互動與系統。",
+    learnings: [
+      "UI Design",
+      "User Flow",
+      "Wireframe",
+      "Cross-platform Design",
+      "Design System",
+    ],
+    diagonalLine: true,
+  },
+  {
+    number: "03",
+    title: "Technical Thinking",
+    description: "理解產品如何被實際打造，開始建立工程思維。",
+    learnings: [
+      "HTML / CSS",
+      "Javascript",
+      "Vue.js",
+      "Component-based Design",
+      "Cross-functional Collaboration",
+    ],
+    diagonalLine: false,
+  },
+  {
+    number: "04",
+    title: "Product Thinking",
+    description: "開始從產品角度思考問題，而不只是設計畫面。",
+    learnings: [
+      "User Research",
+      "UX Design",
+      "Data Analysis",
+      "Product Strategy",
+      "Product Decision",
+    ],
+    diagonalLine: true,
+  },
+  {
+    number: "05",
+    title: "Continuous Evolution",
+    description: "持續整合設計、技術與產品思維，建立完整的工作方法。",
+    learnings: [
+      "Systems Thinking",
+      "Product Strategy",
+      "Product Discovery",
+      "AI-assisted Workflow",
+      "Entrepreneurship",
+    ],
+    diagonalLine: false,
+  },
+];
