@@ -22,23 +22,27 @@ export default function JourneyStage() {
                 </span>
 
                 <div className="col-span-5 col-start-4 pb-8">
-                    <h3 className="font-weight-Medium text-point leading-point tracking-point">{item.title}</h3>
+                    <h3 className="font-weight-Medium text-point leading-point tracking-point pb-3">{item.title}</h3>
 
-                    <p className="font-weight-Medium text-subContent leading-subContent tracking-subContent">{item.description}</p>
+                    <p className="pb-8 font-weight-Medium text-subContent leading-subContent tracking-subContent">{item.description}</p>
+                    <div className="flex gap-6">
+                          <p className="font-weight-extraBold text-companyTitle leading-companyTitle tracking-companyTitle">{item.company}</p>
+                        <div>
+                            <p className="pb-4 font-weight-extraBold text-companyTitle leading-companyTitle tracking-companyTitle">Key Learnings</p>
 
-                    <p className="font-weight-extraBold text-companyTitle leading-companyTitle tracking-companyTitle">Key Learnings</p>
-
-                    <ul>
-                    {item.learnings.map((learning) => (
-                        <li
-                            key={learning}
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
-                        >
-                            <Bullet />
-                            {learning}
-                        </li>
-                    ))}
-                    </ul>
+                            <ul>
+                            {item.learnings.map((learning) => (
+                                <li
+                                    key={learning}
+                                    className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                                >
+                                    <Bullet />
+                                    {learning}
+                                </li>
+                            ))}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 {item.diagonalLine && (
