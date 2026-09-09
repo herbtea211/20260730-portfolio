@@ -1,8 +1,5 @@
-export default function WorksPage () {
-    return (
-        <>
-            <h1>works</h1>
-        </>
+import { redirect } from "next/navigation";
 
-    )
+export default function Page() {
+  redirect("/works/recipe");
 }

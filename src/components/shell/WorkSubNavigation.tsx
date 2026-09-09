@@ -1,21 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { navigation } from "@/data/navigation";
-import Container from "@/components/shell/Container";
 import { usePathname } from "next/navigation";
+import { workSubNavigation } from "@/data/workSubNavigation";
+import Container from "@/components/shell/Container";
 
-export default function Navigation() {
+export default function WorkSubNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-10 py-12">
+    <nav>
       <Container>
         <ul className="flex justify-center gap-8">
-          {navigation.map((item) => {
-            const isActive =
-              pathname === item.href ||
-              pathname.startsWith(`${item.href}/`);
+          {workSubNavigation.map((item) => {
+            const isActive = pathname === item.href;
 
             return (
               <li key={item.href}>
