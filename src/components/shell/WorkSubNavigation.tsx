@@ -21,7 +21,7 @@ export default function WorkSubNavigation() {
                   href={item.href}
                   className={
                     isActive
-                      ? "rounded-full bg-primary px-10 py-2 text-black"
+                      ? "rounded-full border-2 border-primary px-10 py-2 text-primary"
                       : "text-textColor hover:text-textPrimary"
                   }
                 >
