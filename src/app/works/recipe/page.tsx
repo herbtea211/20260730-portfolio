@@ -40,7 +40,6 @@ export default function Page() {
       </section>
       <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>02 專案概述</WorkSectionTitle>
-
         <WorkSectionSubtitle>|| Background</WorkSectionSubtitle>
 
         <p className="pb-3">
