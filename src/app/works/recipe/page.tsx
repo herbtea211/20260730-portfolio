@@ -29,9 +29,8 @@ export default function Page() {
           </>
         }
       />
-      <section className="col-start-2 col-span-6 pb-80">
+      <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>01 基礎功能</WorkSectionTitle>
-
         <WorkSectionSubtitle>||新增配方</WorkSectionSubtitle>
 
         <Image
@@ -39,12 +38,12 @@ export default function Page() {
           alt="新增配方功能畫面"
         />
       </section>
-      <section className="col-start-2 col-span-6 pb-80">
+      <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>02 專案概述</WorkSectionTitle>
 
         <WorkSectionSubtitle>|| Background</WorkSectionSubtitle>
 
-        <p>
+        <p className="pb-3">
           參與兩段不同規模的餐飲現場，透過實際執行下列工作項目，觀察潛在問題。
         </p>
         <div className="grid grid-cols-2 gap-8">
@@ -105,26 +104,31 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="col-start-2 col-span-6">
+      <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>03 痛點</WorkSectionTitle>
-
-        <p>
-          長期習慣固定倍率備餐，遇到緊急情況反應時間過長
-        </p>
-
-        <p>
-          採購量很難精準計算，造成庫存成本增加
-        </p>
-
-        <p>
-          季度大盤點非常困難，半成品難以回推用料
-        </p>
+        <ul className="pb-8">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />長期習慣固定倍率備餐，遇到緊急情況反應時間過長
+          </li>
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />採購量很難精準計算，造成庫存成本增加
+          </li>
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />季度大盤點非常困難，半成品難以回推用料
+          </li>
+        </ul>
         <Image
           src={recipe04}
           alt="原料總需求"
         />
       </section>
-      <section className="col-start-2 col-span-6">
+      <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>04 產品策略</WorkSectionTitle>
 
         <WorkSectionSubtitle>
@@ -132,13 +136,22 @@ export default function Page() {
         </WorkSectionSubtitle>
 
         <WorkSectionSubtitle>|| 01．動態換算</WorkSectionSubtitle>
-
-        <p>依需求自動換算，不受固定倍率限制。</p>
-
+        <ul className="pb-8">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />依需求自動換算，不受固定倍率限制。
+          </li>
+        </ul>
         <WorkSectionSubtitle>|| 02．物料規劃</WorkSectionSubtitle>
-
-        <p>逐步建立需求、製作量、原料與採購之間的可計算關係。</p>
-                <Image
+        <ul className="pb-8">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />逐步建立需求、製作量、原料與採購之間的可計算關係。
+          </li>
+        </ul>
+        <Image
           src={recipe05}
           alt="物料規劃"
         />
@@ -148,102 +161,108 @@ export default function Page() {
 
         <WorkSectionSubtitle>|| 固定配方，動態換算</WorkSectionSubtitle>
 
-        <div className="flex items-start gap-3">
-          <Image
-            src={recipe08}
-            alt=""
-          />
-          <p>依需求自動換算，不受固定倍率限制。</p>
-        </div>
+        <ul className="pb-10">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />逐步建立需求、製作量、原料與採購之間的可計算關係。
+          </li>
+        </ul>
 
         <Image
           src={recipe06}
           alt="固定配方，動態換算"
         />
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-center justify-center gap-3 py-20">
           <Image
             src={recipe08}
             alt=""
           />
-          <p>長期習慣固定倍率備餐，遇到緊急情況反應時間過長</p>
+          <p className="text-subContent leading-subContent tracking-subContent">長期習慣<span className="text-textPrimaryColor">固定倍率備餐</span>，遇到<span className="text-textPrimaryColor">緊急情況反應時間過長</span></p>
         </div>
 
         <WorkSectionSubtitle>|| 選擇成品，一鍵生成採購清單</WorkSectionSubtitle>
 
-        <div className="flex items-start gap-3">
-          <Image
-            src={recipe08}
-            alt=""
-          />
-          <p>照清單採購最精簡物料</p>
-        </div>
+        <ul className="pb-10">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />照清單採購最精簡物料
+          </li>
+        </ul>
+
 
         <Image
           src={recipe07}
           alt="選擇成品，一鍵生成採購清單"
         />
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-start justify-center gap-3 pt-20 pb-4">
           <Image
             src={recipe08}
             alt=""
           />
-          <p>採購量很難精準計算，造成庫存成本增加</p>
+          <p className="text-subContent leading-subContent tracking-subContent"><span className="text-textPrimaryColor">採購量</span>很難精準計算，造成<span className="text-textPrimaryColor">庫存成本</span>增加</p>
         </div>
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-start justify-center gap-3 pb-20">
           <Image
             src={recipe08}
             alt=""
           />
-          <p>季度大盤點非常困難，半成品難以回推用料</p>
+          <p className="text-subContent leading-subContent tracking-subContent">季度大<span className="text-textPrimaryColor">盤點</span>非常困難，半成品難以<span className="text-textPrimaryColor">回推用料</span></p>
         </div>
       </section>
-      <section className="col-start-2 col-span-6">
+      <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>06 關鍵學習</WorkSectionTitle>
 
-        <p>
-          從 0 到 1 打造產品，實際體驗對於挖掘痛點、建立可落地產品非常有幫助。
-        </p>
+        <p className="text-textPrimaryColor pb-10">從 0 到 1 打造產品，實際體驗對於挖掘痛點、建立可落地產品非常有幫助。</p>
 
         <WorkSectionSubtitle>|| 實際體驗</WorkSectionSubtitle>
-
-        <div className="flex items-center gap-2">
-          <Bullet />
-          表面需求 → 各工作節點觀察
-        </div>
+        <ul className="pb-10">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />表面需求 → 各工作節點觀察
+          </li>
+        </ul>
 
         <WorkSectionSubtitle>|| 挖掘痛點</WorkSectionSubtitle>
-
-        <div className="flex items-center gap-2">
-          <Bullet />
-          洞察問題 → 解決方案 → 單一功能 → 完整系統
-        </div>
+        <ul className="pb-10">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />洞察問題 → 解決方案 → 單一功能 → 完整系統
+          </li>
+        </ul>
 
         <WorkSectionSubtitle>|| 產品落地</WorkSectionSubtitle>
+        <ul className="pb-10">
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />規劃資訊架構與核心流程
+          </li>
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />建立 Design System
+          </li>
 
-        <div className="flex items-center gap-2">
-          <Bullet />
-          規劃資訊架構與核心流程
-        </div>
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />完成核心 UX / UI Design
+          </li>
 
-        <div className="flex items-center gap-2">
-          <Bullet />
-          建立 Design System
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Bullet />
-          完成核心 UX / UI Design
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Bullet />
-          持續規劃後續產品發展
-        </div>
+          <li
+            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+          >
+            <Bullet />持續規劃後續產品發展
+          </li>
+        </ul>
       </section>
-      
     </WorkPage>
   );
 }
