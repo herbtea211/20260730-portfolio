@@ -3,6 +3,7 @@ import WorkHero from "@/components/sections/workHero";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
 import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
 import Image from "next/image";
+import Bullet from "@/components/ui/Bullet"
 
 import guideline01 from "@/assets/image/Work/design-guideline/guideline-01.png";
 import guideline02 from "@/assets/image/Work/design-guideline/guideline-02.png";
@@ -25,8 +26,7 @@ export default function Page() {
         role="Project Lead"
         description="重新整理 Guideline 架構與設計規範，支援品牌重構，提升設計一致性，並改善設計、開發與跨部門協作效率。"
       />
-    </WorkPage>
-    <section className="col-start-2 col-span-6 pb-40">
+      <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>01 Overview｜專案概述</WorkSectionTitle>
       <WorkSectionSubtitle>|| Background</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
@@ -55,8 +55,8 @@ export default function Page() {
             <Bullet />制定 Guideline 文件結構與撰寫規範。
         </li>
     </ul>
-    <section/>
-    <section className="col-start-2 col-span-6 pb-40">
+    </section>
+        <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>02 Discovery｜現況盤點</WorkSectionTitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         在正式展開 Guideline 重構前，我先盤點既有 Guideline 的使用情況，並向前端與美術協作部門收集實際使用經驗與意見，整理出過去 Guideline 長期發展中需要改善的重點，作為後續重構的依據。
@@ -77,8 +77,8 @@ export default function Page() {
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         Guideline 缺少對應的規格文件，前端開發缺乏一致的實作依據，增加溝通與維護成本。
       </p>
-    <section/>
-    <section className="col-start-2 col-span-6 pb-40">
+    </section>
+        <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>03 Framework Refinement｜架構重整</WorkSectionTitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         根據盤點結果，我補足既有規範缺漏、新增平面設計規範，並重新整理 Component 與 Composition，提升 Guideline 的完整性與維護效率。
@@ -87,7 +87,7 @@ export default function Page() {
         src={guideline01}
         alt=""
       />
-    <section/>
+    </section>
     <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>04 Key Improvements｜關鍵改善</WorkSectionTitle>
       <WorkSectionSubtitle>|| 互動元件更新</WorkSectionSubtitle>
@@ -159,7 +159,7 @@ export default function Page() {
         src={guideline08}
         alt=""
       />
-    <section/>
+    </section>
     <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>05 Key Challenges | 關鍵挑戰</WorkSectionTitle>
       <WorkSectionSubtitle>|| 跨部門溝通與協調困難</WorkSectionSubtitle>
@@ -176,7 +176,55 @@ export default function Page() {
         src={guideline09}
         alt=""
       />
-      <WorkSectionSubtitle>|| 跨部門溝通與協調困難</WorkSectionSubtitle>
-    <section/>
+      <WorkSectionSubtitle>|| 設計變更帶來的開發成本</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        我先理解各部門的工作目標，再以對方關注的議題作為溝通切入點，例如：點擊率，頁面瀏覽率，讓 Guideline 的價值更容易被理解與接受。
+      </p>
+    </section>
+    <section>
+      <WorkSectionSubtitle>|| Guideline 的跨部門採用頻率低</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        Guideline 建立完成後，前端與其他部門仍沿用既有的工作流程，缺乏方便的查閱方式，使 Guideline 難以真正落實於日常協作。
+      </p>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">Solution</p>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        我評估並導入適合團隊使用的 Guideline 線上平台，將設計規範集中管理，讓不同部門都能依照自己的工作方式快速查閱與使用，降低資訊取得成本，提升 Guideline 在日常協作中的採用率。
+      </p>
+      <Image
+        src={guideline10}
+        alt=""
+      />
+    </section>
+    <section>
+      <WorkSectionTitle>06｜Project Impact 專案成果</WorkSectionTitle>
+      <WorkSectionSubtitle>|| 完成 Guideline 全面升級</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        全面重整 Guideline 的架構、內容與規範，使其更符合品牌重構方向，並重新成為支撐產品設計與開發的重要基礎。
+      </p>
+      <WorkSectionSubtitle>|| 提升 Guideline 的實用性與採用率</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        重新整理 Guideline 架構與內容，提升文件的可讀性與查找效率，讓 Guideline 重新成為團隊日常工作的依據。
+      </p>
+      <WorkSectionSubtitle>|| 重新定位 Art Team 的角色</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        透過 Guideline 重整與品牌重構，讓 Art Team 從單純產出介面，轉變為共同維護品牌一致性的重要角色。
+      </p>
+      <WorkSectionSubtitle>|| 重新建立跨部門協作共識</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        重新對齊設計與前端的協作方式，提升跨部門合作效率，讓設計規範更容易落實於產品開發流程。
+      </p>
+      <WorkSectionSubtitle>|| 改善長期累積的設計問題</WorkSectionSubtitle>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        重新整理既有設計規範與工作流程，逐步改善長期累積的設計問題，建立更穩定且容易維護的設計基礎。
+      </p>
+    </section>
+
+
+    
+
+
+
+    </WorkPage>
+    
   );
 }
