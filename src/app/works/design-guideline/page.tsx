@@ -116,7 +116,7 @@ export default function Page() {
             src={guideline03}
             alt=""
           />
-        <div/>
+        </div>
         <div>
           <p className="text-subContent leading-subContent tracking-subContent pb-6">
             實際範例
@@ -125,8 +125,8 @@ export default function Page() {
             src={guideline04}
             alt=""
           />
-        <div/>
-      <div/>
+        </div>
+      </div>
       <WorkSectionSubtitle>|| 組件文件標準化</WorkSectionSubtitle>
       <Image
         src={guideline05}
@@ -218,12 +218,6 @@ export default function Page() {
         重新整理既有設計規範與工作流程，逐步改善長期累積的設計問題，建立更穩定且容易維護的設計基礎。
       </p>
     </section>
-
-
-    
-
-
-
     </WorkPage>
     
   );
