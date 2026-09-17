@@ -15,7 +15,7 @@ import guideline07 from "@/assets/image/Work/design-guideline/guideline-07.png";
 import guideline08 from "@/assets/image/Work/design-guideline/guideline-08.png";
 import guideline09 from "@/assets/image/Work/design-guideline/guideline-09.png";
 import guideline10 from "@/assets/image/Work/design-guideline/guideline-10.png";
-// import guideline11 from "@/assets/image/Work/design-guideline/guideline-11.png";
+import guideline11 from "@/assets/image/Work/design-guideline/guideline-11.png";
 
 export default function Page() {
   return (
@@ -80,7 +80,7 @@ export default function Page() {
     </section>
         <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>03 Framework Refinement｜架構重整</WorkSectionTitle>
-      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+      <p className="text-subContent leading-subContent tracking-subContent pb-8">
         根據盤點結果，我補足既有規範缺漏、新增平面設計規範，並重新整理 Component 與 Composition，提升 Guideline 的完整性與維護效率。
       </p>
       <Image
@@ -103,11 +103,12 @@ export default function Page() {
       <Image
         src={guideline02}
         alt=""
+        className="pb-10"
       />
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         統整List
       </p>
-      <div className="flex">
+      <div className="flex pb-12">
         <div>
           <p className="text-subContent leading-subContent tracking-subContent pb-6">
             重新整理 List 規範，統一不同情境下的結構與使用方式，提升設計一致性與後續擴充性。
@@ -131,14 +132,16 @@ export default function Page() {
       <Image
         src={guideline05}
         alt=""
+        className="pb-20"
       />
       <WorkSectionSubtitle>|| Design Token 建立</WorkSectionSubtitle>
-      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+      <p className="text-subContent leading-subContent tracking-subContent">
         建立 Figma Design Token，將 Color、Typography、Shadow、Border、Border Radius、Spacing 與 Opacity 等設計屬性系統化管理，提供團隊一致且可重複使用的設計基礎，提升設計一致性與後續維護效率。
       </p>
       <Image
         src={guideline06}
         alt=""
+        className="pb-20"
       />
 
       <WorkSectionSubtitle>|| 視覺設計原則</WorkSectionSubtitle>
@@ -175,13 +178,21 @@ export default function Page() {
       <Image
         src={guideline09}
         alt=""
+        className="pb-20 mx-auto"
       />
       <WorkSectionSubtitle>|| 設計變更帶來的開發成本</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         我先理解各部門的工作目標，再以對方關注的議題作為溝通切入點，例如：點擊率，頁面瀏覽率，讓 Guideline 的價值更容易被理解與接受。
       </p>
-    </section>
-    <section>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">Solution</p>
+      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        我主動向前端取得實際的程式碼，研究 Token 的實作方式，並與前端共同調整 Token Mapping，同時提前與前端同步後續可能的設計調整方向，讓設計規範與實際開發保持一致，降低後續設計變更帶來的修改成本。
+      </p>
+      <Image
+        src={guideline10}
+        alt=""
+        className="pb-20 mx-auto"
+      />
       <WorkSectionSubtitle>|| Guideline 的跨部門採用頻率低</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         Guideline 建立完成後，前端與其他部門仍沿用既有的工作流程，缺乏方便的查閱方式，使 Guideline 難以真正落實於日常協作。
@@ -191,11 +202,12 @@ export default function Page() {
         我評估並導入適合團隊使用的 Guideline 線上平台，將設計規範集中管理，讓不同部門都能依照自己的工作方式快速查閱與使用，降低資訊取得成本，提升 Guideline 在日常協作中的採用率。
       </p>
       <Image
-        src={guideline10}
+        src={guideline11}
         alt=""
+        className="pb-20 mx-auto"
       />
     </section>
-    <section>
+    <section className="col-start-2 col-span-6 pb-40">
       <WorkSectionTitle>06｜Project Impact 專案成果</WorkSectionTitle>
       <WorkSectionSubtitle>|| 完成 Guideline 全面升級</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">

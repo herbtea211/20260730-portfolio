@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 import { indexCardData } from "@/data/indexCardData"
 import Button from "@/components/ui/Button"
@@ -26,8 +27,9 @@ export default function IndexCard() {
               <p className="font-Medium text-content leading-content tracking-content">{item.description}</p>
               <p>{item.platform}</p>
             </div>
-
-            <Button showLabel={false} label="" />
+            <Link href={item.href}>
+              <Button showLabel={false} label="" />
+            </Link>
           </div>
         </React.Fragment>
       ))}

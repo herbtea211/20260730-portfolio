@@ -44,7 +44,7 @@ export const stages = [
   {
     number: "04",
     title: "Product Thinking",
-    description: "開始從使用者、產品與商業角度思考，而不只是設計介面",
+    description: "跳脫單純介面設計，從產品與商業角度看待產品",
     company: "露天市集",
     learnings: [
       "User Research",
@@ -58,7 +58,7 @@ export const stages = [
   {
     number: "05",
     title: "Continuous Evolution",
-    description: "持續整合研究、策略與系統思維，打造真正解決問題的產品",
+    description: "整合研究、策略與系統思維，打造真正解決問題的產品",
     company: "維次三維＆個人產品：配配方",
     learnings: [
       "Systems Thinking",

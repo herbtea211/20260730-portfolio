@@ -11,7 +11,7 @@ export const indexCardData = [
       "為專業廚師打造的配方管理應用程式，重新梳理配方管理與原料採購流程",
     platform: "#iOS App",
     image: recipeManagementAppliction,
-    href: "#",
+    href: "/works/recipe",
   },
   {
     title: "Interactive Space",
@@ -21,7 +21,7 @@ export const indexCardData = [
       "線上即時空間設計應用軟體，重塑設計師與業主的溝通方式",
     platform: "#Web / Mobile App",
     image: interactiveSpace,
-    href: "#",
+    href: "/works/interactive-space",
   },
   {
     title: "露天市集 Design Guideline",
@@ -31,6 +31,6 @@ export const indexCardData = [
       "重構電商平台 Design Guideline，建立一致且可延展的設計規範",
     platform: "#Web / Mobile App",
     image: designGuideline,
-    href: "#",
+    href: "/works/design-guideline",
   },
 ];
