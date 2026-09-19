@@ -35,7 +35,7 @@ export default function Page() {
         description="在超擬真 3D 空間中，即時配置、替換家具與規格的空間設計工具，降低專業工具操作門檻，協助非專業使用者快速建立並比較不同方案，完成決策。"
       />
       <iframe
-       className="col-start-2 col-span-6 -mt-20"
+       className="col-start-2 col-span-6 -mt-4"
        title="vimeo-player"
        src="https://player.vimeo.com/video/952197467?h=f91f9b3b2f" width="640" height="360"
        frameBorder="0"
