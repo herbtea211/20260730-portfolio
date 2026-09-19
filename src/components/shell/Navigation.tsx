@@ -12,6 +12,7 @@ export default function Navigation() {
     <nav className="absolute inset-x-0 top-0 z-10 py-12">
       <Container>
         <ul className="flex justify-center gap-8">
+        {/* <ul className="flex justify-center gap-8 overflow-x-auto"> */}
           {navigation.map((item) => {
             const isActive =
               pathname === item.href ||

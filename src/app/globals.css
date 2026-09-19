@@ -15,7 +15,9 @@
 
   /* hero=>hero */
   --font-size-hero: 60px;
+  --font-size-hero-mobile: 40px;
   --line-height-hero: 86px;
+  --line-height-hero-mobile: 56px;
   --letter-spacing-hero: 20%;
 
 /* pointContent=>point */
@@ -65,7 +67,9 @@
 
   /* hero=>hero */
   --text-hero: var(--font-size-hero);
+  --text-hero-mobile: var(--font-size-hero-mobile);
   --leading-hero: var(--line-height-hero);
+  --leading-hero-mobile: var(--line-height-hero-mobile);
   --tracking-hero: var(--letter-spacing-hero);
 
   /* pointContent=>point */
