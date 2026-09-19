@@ -3,6 +3,9 @@ import WorkHero from "@/components/sections/workHero";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
 import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
 import Image from "next/image";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+
 import Bullet from "@/components/ui/Bullet"
 import recipe01 from "@/assets/image/Work/recipe/recipe-01.png";
 import recipe02 from "@/assets/image/Work/recipe/recipe-02.png";
@@ -29,6 +32,15 @@ export default function Page() {
           </>
         }
       />
+      <div className="col-start-2 col-span-6 -mt-80">
+        <Link
+          href="https://www.figma.com/proto/H4qxpb5olzM8NlCdJ1cCXy/%E9%85%8D%E9%85%8D%E6%96%B9-prototype?node-id=1-199&page-id=0%3A1&starting-point-node-id=1%3A199&t=DtuqgF3Alpl2XY2I-1&scaling=contain&content-scaling=fixed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button showLabel={true} label="Prototype" />
+        </Link>
+      </div>
       <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>01 基礎功能</WorkSectionTitle>
         <WorkSectionSubtitle>||新增配方</WorkSectionSubtitle>
