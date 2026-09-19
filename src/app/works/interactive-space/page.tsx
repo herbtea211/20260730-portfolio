@@ -3,7 +3,7 @@ import WorkHero from "@/components/sections/workHero";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
 import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
 import Image from "next/image";
-import interactivespace01 from "@/assets/image/Work/interactive-space/interactive-space-01.png";
+// import interactivespace01 from "@/assets/image/Work/interactive-space/interactive-space-01.png";
 import interactivespace02 from "@/assets/image/Work/interactive-space/interactive-space-02.png";
 import interactivespace03 from "@/assets/image/Work/interactive-space/interactive-space-03.png";
 import interactivespace04 from "@/assets/image/Work/interactive-space/interactive-space-04.png";
@@ -34,12 +34,19 @@ export default function Page() {
         role="Product Designer / mobile / web"
         description="在超擬真 3D 空間中，即時配置、替換家具與規格的空間設計工具，降低專業工具操作門檻，協助非專業使用者快速建立並比較不同方案，完成決策。"
       />
-      <section className="col-start-2 col-span-6 pb-4">
+      <iframe
+       className="col-start-2 col-span-6 -mt-20"
+       title="vimeo-player"
+       src="https://player.vimeo.com/video/952197467?h=f91f9b3b2f" width="640" height="360"
+       frameBorder="0"
+       referrerPolicy="strict-origin-when-cross-origin"
+       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowFullScreen></iframe>
+      {/* <section className="col-start-2 col-span-6 pb-4">
         <Image
           src={interactivespace01}
           alt="互動空間產品畫面"
         />
-      </section>
+      </section> */}
 
       <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>01 Overview｜專案概述</WorkSectionTitle>
