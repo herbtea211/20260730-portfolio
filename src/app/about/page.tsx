@@ -4,17 +4,21 @@ import JourneyStage from "@/components/sections/aboutSectionJourneyStage"
 
 export default function AboutPage() {
   return (
-    <main>
-      <section className="relative mx-auto max-w-[1440px] overflow-hidden">
+    <main className="w-full">
+      <section className="relative w-full max-w-[1440px] mx-auto overflow-hidden">
         <Image
           src={heroBackground}
           alt=""
           priority
-          className="h-auto w-full"
+          className="
+            relative left-1/2 -translate-x-1/2
+            block h-auto max-w-none
+            w-[900px] md:w-[1440px]
+      "
         />
 
-        <div className="absolute inset-0 mx-auto grid max-w-[1440px] grid-cols-8 gap-x-8 px-[120px]">
-          <h1 className="col-span-6 col-start-2 pt-60 text-white font-weight-extraBold text-hero leading-hero tracking-hero">
+        <div className="absolute inset-0 mx-auto grid max-w-[1440px] grid-cols-1 md:grid-cols-8 gap-x-8 px-8 md:px-[120px]">
+          <h1 className="col-span-full md:col-span-6 md:col-start-2 pt-35 md:pt-60 text-white font-weight-extraBold text-hero-mobile md:text-hero md:leading-hero md:tracking-hero">
             時間是人生最寶貴的資源。
             <br />
             好設計，就是把時間留給最重要的人、事、物。
@@ -26,7 +30,7 @@ export default function AboutPage() {
           className="mx-auto mt-6 h-[240px] w-px bg-white/40"
           aria-hidden="true"
         />
-        <div className="mx-auto grid max-w-[1440px] grid-cols-8 gap-x-8 px-[120px]">
+        <div className="mx-auto grid max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-[120px]">
           <p className="pt-12 pb-12 col-span-4 col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
             運用使用者研究
             <br />
@@ -35,9 +39,10 @@ export default function AboutPage() {
             系統思維
           </p>
         </div>
-        <div className="mx-auto grid max-w-[1440px] grid-cols-8 gap-x-8 px-[120px]">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-3 gap-x-8 px-4 md:grid-cols-8 md:px-[120px]">
           <div
-            className="col-span-2 col-start-1 mx-auto"
+            // className="col-span-2 col-start-1 mx-auto"
+            className="col-span-1 col-start-1 mx-auto md:col-span-2 md:col-start-1"
             aria-hidden="true"
           >
             <svg
@@ -56,16 +61,16 @@ export default function AboutPage() {
           </div>
 
           <div
-            className="col-span-2 col-start-4 mx-auto h-[72px] w-px bg-white/40"
+            className="col-span-1 col-start-2 mx-auto h-[72px] w-px bg-white/40 md:col-span-2 md:col-start-4"
             aria-hidden="true"
           />
 
           <div
-            className="col-span-2 col-start-7 mx-auto size-[72px] rounded-full border border-white/40"
+            className="col-span-1 col-start-3 mx-auto size-[72px] rounded-full border border-white/40 md:col-span-2 md:col-start-7"
             aria-hidden="true"
           />
         </div>
-        <div className="mx-auto grid max-w-[1440px] grid-cols-8 gap-x-8 px-[120px]">
+        <div className="mx-auto md:grid max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-[120px]">
           <p className="pt-12 pb-12 col-span-4 col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
             洞察問題本質
             <br />
@@ -78,7 +83,7 @@ export default function AboutPage() {
         />
       </section>
       <section className="mx-auto max-w-[1440px] px-[120px]">
-        <h2 className="pt-50 pb-50 text-center text-primary font-weight-extraBold text-sectionTitle leading-sectionTitle tracking-sectionTitle">
+        <h2 className="pt-20 md:pt-50 md:pb-50 text-center text-primary font-weight-extraBold text-sectionTitle leading-sectionTitle tracking-sectionTitle">
           我如何一步步成為 Product Designer
         </h2>
       </section>
