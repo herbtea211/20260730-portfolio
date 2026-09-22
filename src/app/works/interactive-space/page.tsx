@@ -3,7 +3,6 @@ import WorkHero from "@/components/sections/workHero";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
 import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
 import Image from "next/image";
-// import interactivespace01 from "@/assets/image/Work/interactive-space/interactive-space-01.png";
 import interactivespace02 from "@/assets/image/Work/interactive-space/interactive-space-02.png";
 import interactivespace03 from "@/assets/image/Work/interactive-space/interactive-space-03.png";
 import interactivespace04 from "@/assets/image/Work/interactive-space/interactive-space-04.png";
@@ -17,9 +16,14 @@ import interactivespace11 from "@/assets/image/Work/interactive-space/interactiv
 import interactivespace12 from "@/assets/image/Work/interactive-space/interactive-space-12.png";
 import interactivespace13 from "@/assets/image/Work/interactive-space/interactive-space-13.png";
 import interactivespace14 from "@/assets/image/Work/interactive-space/interactive-space-14.png";
+import interactivespace1401 from "@/assets/image/Work/interactive-space/interactive-space-14-1.png";
+import interactivespace1402 from "@/assets/image/Work/interactive-space/interactive-space-14-2.png";
 import interactivespace15 from "@/assets/image/Work/interactive-space/interactive-space-15.png";
 import interactivespace16 from "@/assets/image/Work/interactive-space/interactive-space-16.png";
 import interactivespace17 from "@/assets/image/Work/interactive-space/interactive-space-17.png";
+import interactivespace1701 from "@/assets/image/Work/interactive-space/interactive-space-17-01.png";
+import interactivespace1702 from "@/assets/image/Work/interactive-space/interactive-space-17-02.png";
+
 
 import recipe08 from "@/assets/image/Work/recipe/recipe-08.png";
 
@@ -35,18 +39,12 @@ export default function Page() {
         description="在超擬真 3D 空間中，即時配置、替換家具與規格的空間設計工具，降低專業工具操作門檻，協助非專業使用者快速建立並比較不同方案，完成決策。"
       />
       <iframe
-       className="col-start-2 col-span-6 -mt-4"
+       className="col-span-full md:col-start-2 md:col-span-6 -mt-4 w-full aspect-video"
        title="vimeo-player"
-       src="https://player.vimeo.com/video/952197467?h=f91f9b3b2f" width="640" height="360"
+       src="https://player.vimeo.com/video/952197467?h=f91f9b3b2f"
        frameBorder="0"
        referrerPolicy="strict-origin-when-cross-origin"
        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowFullScreen></iframe>
-      {/* <section className="col-start-2 col-span-6 pb-4">
-        <Image
-          src={interactivespace01}
-          alt="互動空間產品畫面"
-        />
-      </section> */}
 
       <section className="col-start-2 col-span-6 pb-40">
         <WorkSectionTitle>01 Overview｜專案概述</WorkSectionTitle>
@@ -123,13 +121,13 @@ export default function Page() {
           alt="優先目標用戶 Persona"
           className="pb-20"
         />
-
-        <WorkSectionSubtitle>|| Why this user?</WorkSectionSubtitle>
-
-        <Image
-          src={interactivespace07}
-          alt="Why this user"
-        />
+        <div className="hidden md:block">
+          <WorkSectionSubtitle>|| Why this user?</WorkSectionSubtitle>
+          <Image
+            src={interactivespace07}
+            alt="Why this user"
+          />
+        </div>
 
         <p className="flex items-center justify-center text-center text-textPrimaryColor text-subSectionTitle leading-subSectionTitle tracking-subSectionTitle font-weight-bold py-40">
           「許多需求只需要設計師 20% 的能力，但市場上沒有 0.2 個設計師。」
@@ -204,7 +202,17 @@ export default function Page() {
           <Image
             src={interactivespace14}
             alt=""
-            className="pb-10"
+            className="pb-10 hidden md:block"
+          />
+          <Image
+            src={interactivespace1401}
+            alt=""
+            className="pb-10 md:hidden"
+          />
+            <Image
+            src={interactivespace1402}
+            alt=""
+            className="pb-10 md:hidden"
           />
         <div className="flex items-start gap-3 pb-10">
           <Image
@@ -246,7 +254,17 @@ export default function Page() {
           <Image
             src={interactivespace17}
             alt=""
-            className="pb-10"
+            className="pb-10 hidden md:block"
+          />
+          <Image
+            src={interactivespace1701}
+            alt=""
+            className="pb-10 md:hidden"
+          />
+          <Image
+            src={interactivespace1702}
+            alt=""
+            className="pb-10 md:hidden"
           />
         <div className="flex items-start gap-3 pb-10">
           <Image

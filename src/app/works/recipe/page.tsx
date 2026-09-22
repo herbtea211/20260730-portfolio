@@ -55,12 +55,12 @@ export default function Page() {
         <Image
           src={recipe01mobile1}
           alt="新增配方功能畫面"
-          className="block pb-4 w-full h-auto md:hidden"
+          className="block pb-4 w-[80%] mx-auto md:hidden"
         />
         <Image
           src={recipe01mobile2}
           alt="新增配方功能畫面"
-          className="block md:hidden w-full h-auto"
+          className="block pb-4 w-[80%] mx-auto md:hidden"
         />
       </section>
       <section className="col-start-2 col-span-6 pb-40">

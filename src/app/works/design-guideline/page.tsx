@@ -108,7 +108,7 @@ export default function Page() {
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
         統整List
       </p>
-      <div className="flex pb-12">
+      <div className="md:flex pb-12">
         <div>
           <p className="text-subContent leading-subContent tracking-subContent pb-6">
             重新整理 List 規範，統一不同情境下的結構與使用方式，提升設計一致性與後續擴充性。
@@ -119,7 +119,7 @@ export default function Page() {
           />
         </div>
         <div>
-          <p className="text-subContent leading-subContent tracking-subContent pb-6">
+          <p className="text-subContent leading-subContent tracking-subContent pb-6 pt-10">
             實際範例
           </p>
           <Image
@@ -155,7 +155,7 @@ export default function Page() {
         src={guideline07}
         alt=""
       />
-      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+      <p className="text-subContent leading-subContent tracking-subContent pb-6 pt-10">
         範例:Banner設計規範
       </p>
       <Image
