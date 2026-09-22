@@ -8,6 +8,8 @@ import Button from "@/components/ui/Button";
 
 import Bullet from "@/components/ui/Bullet"
 import recipe01 from "@/assets/image/Work/recipe/recipe-01.png";
+import recipe01mobile1 from "@/assets/image/Work/recipe/recipe-01-mobile-1.png";
+import recipe01mobile2 from "@/assets/image/Work/recipe/recipe-01-mobile-2.png";
 import recipe02 from "@/assets/image/Work/recipe/recipe-02.png";
 import recipe03 from "@/assets/image/Work/recipe/recipe-03.png";
 import recipe04 from "@/assets/image/Work/recipe/recipe-04.png";
@@ -48,6 +50,17 @@ export default function Page() {
         <Image
           src={recipe01}
           alt="新增配方功能畫面"
+          className="hidden md:block"
+        />
+        <Image
+          src={recipe01mobile1}
+          alt="新增配方功能畫面"
+          className="block md:hidden pb-4"
+        />
+        <Image
+          src={recipe01mobile2}
+          alt="新增配方功能畫面"
+          className="block md:hidden"
         />
       </section>
       <section className="col-start-2 col-span-6 pb-40">
