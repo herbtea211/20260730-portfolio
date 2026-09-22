@@ -26,12 +26,12 @@
   --letter-spacing-point: 8%;
 
 /* sectionTitle=>sectionTitle */
-  --font-size-sectionTitle: 40px;
+  --font-size-sectionTitle: 32px;
   --line-height-sectionTitle: 56px;
   --letter-spacing-sectionTitle: 12%;
 
 /* contentTitle=>subSectionTitle */
-  --font-size-subSectionTitle: 32px;
+  --font-size-subSectionTitle: 24px;
   --line-height-subSectionTitle: 48px;
   --letter-spacing-subSectionTitle: 8%;
 

@@ -18,7 +18,7 @@ export default function JourneyStage() {
             key={item.number}
             className="relative mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:gap-x-8 md:px-[120px] md:py-24"
           >
-            <span className="translate-x-50 translate-y-60 col-span-1 text-[180px] font-bold leading-none text-white/10 md:col-span-3 md:col-start-1 md:text-[450px]">
+            <span className="translate-x-50 translate-y-60 md:translate-x-30 md:translate-y-30 col-span-1 text-[180px] font-bold leading-none text-white/10 md:col-span-3 md:col-start-1 md:text-[450px]">
               {item.number}
             </span>
 

@@ -4,8 +4,9 @@ import JourneyStage from "@/components/sections/aboutSectionJourneyStage"
 
 export default function AboutPage() {
   return (
-    <main className="w-full">
-      <section className="relative w-full max-w-[1440px] mx-auto overflow-hidden">
+    <main className="w-full overflow-x-hidden">
+      {/* <section className="relative w-full max-w-[1440px] mx-auto overflow-hidden"> */}
+      <section className="relative w-full mx-auto overflow-hidden">
         <Image
           src={heroBackground}
           alt=""
@@ -13,12 +14,12 @@ export default function AboutPage() {
           className="
             relative left-1/2 -translate-x-1/2
             block h-auto max-w-none
-            w-[900px] md:w-[1440px]
+            w-[900px] md:w-full
       "
         />
 
         <div className="absolute inset-0 mx-auto grid max-w-[1440px] grid-cols-1 md:grid-cols-8 gap-x-8 px-8 md:px-[120px]">
-          <h1 className="col-span-full md:col-span-6 md:col-start-2 pt-35 md:pt-60 text-white font-weight-extraBold text-hero-mobile md:text-hero md:leading-hero md:tracking-hero">
+          <h1 className="col-span-full md:col-span-6 md:col-start-2 pt-35 md:pt-100 text-white font-weight-extraBold text-hero-mobile md:text-hero md:leading-hero md:tracking-hero">
             時間是人生最寶貴的資源。
             <br />
             好設計，就是把時間留給最重要的人、事、物。

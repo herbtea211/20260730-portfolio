@@ -105,12 +105,12 @@ export default function Page() {
         alt=""
         className="pb-10"
       />
-      <p className="text-subContent leading-subContent tracking-subContent pb-6">
+      <p className="text-subContent leading-subContent tracking-subContent pb-2">
         統整List
       </p>
       <div className="md:flex pb-12">
-        <div>
-          <p className="text-subContent leading-subContent tracking-subContent pb-6">
+        <div className="pb-8">
+          <p className="max-w-[500px] text-subContent leading-subContent tracking-subContent pb-6">
             重新整理 List 規範，統一不同情境下的結構與使用方式，提升設計一致性與後續擴充性。
           </p>
           <Image
@@ -119,7 +119,7 @@ export default function Page() {
           />
         </div>
         <div>
-          <p className="text-subContent leading-subContent tracking-subContent pb-6 pt-10">
+          <p className="text-subContent leading-subContent tracking-subContent pb-2">
             實際範例
           </p>
           <Image
@@ -178,7 +178,7 @@ export default function Page() {
       <Image
         src={guideline09}
         alt=""
-        className="pb-20 mx-auto"
+        className="pb-40 mx-auto"
       />
       <WorkSectionSubtitle>|| 設計變更帶來的開發成本</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
@@ -191,7 +191,7 @@ export default function Page() {
       <Image
         src={guideline10}
         alt=""
-        className="pb-20 mx-auto"
+        className="pb-40 mx-auto"
       />
       <WorkSectionSubtitle>|| Guideline 的跨部門採用頻率低</WorkSectionSubtitle>
       <p className="text-subContent leading-subContent tracking-subContent pb-6">
