@@ -34,7 +34,7 @@ export default function Page() {
           </>
         }
       />
-      <div className="col-start-2 col-span-6 -mt-80">
+      <div className="col-start-2 col-span-6 -mt-70 md:-mt-80">
         <Link
           href="https://www.figma.com/proto/H4qxpb5olzM8NlCdJ1cCXy/%E9%85%8D%E9%85%8D%E6%96%B9-prototype?node-id=1-199&page-id=0%3A1&starting-point-node-id=1%3A199&t=DtuqgF3Alpl2XY2I-1&scaling=contain&content-scaling=fixed"
           target="_blank"
@@ -43,7 +43,7 @@ export default function Page() {
           <Button showLabel={true} label="Prototype" />
         </Link>
       </div>
-      <section className="col-start-2 col-span-6 pb-40">
+      <section className="col-start-2 col-span-6 py-40 md:py-10">
         <WorkSectionTitle>01 基礎功能</WorkSectionTitle>
         <WorkSectionSubtitle>||新增配方</WorkSectionSubtitle>
 
@@ -55,12 +55,12 @@ export default function Page() {
         <Image
           src={recipe01mobile1}
           alt="新增配方功能畫面"
-          className="block md:hidden pb-4"
+          className="block pb-4 w-full h-auto md:hidden"
         />
         <Image
           src={recipe01mobile2}
           alt="新增配方功能畫面"
-          className="block md:hidden"
+          className="block md:hidden w-full h-auto"
         />
       </section>
       <section className="col-start-2 col-span-6 pb-40">
