@@ -65,6 +65,13 @@ export default function Navigation() {
     };
   }, []);
 
+  const handleOverflowClick = () => {
+    navRef.current?.scrollTo({
+      left: navRef.current.scrollWidth,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="absolute inset-x-0 top-0 z-10 py-12">
       <Container>
@@ -115,12 +122,14 @@ export default function Navigation() {
           </ul>
 
           {hasOverflow && !isScrolled && (
-            <span
-              className="text-sectionTitle pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 bg-background px-4 py-2 text-primary md:hidden"
-              aria-hidden="true"
+            <button
+              type="button"
+              onClick={handleOverflowClick}
+              className="text-sectionTitle absolute right-0 top-1/2 -translate-y-1/2 bg-background px-4 py-2 text-primary md:hidden"
+              aria-label="顯示更多選項"
             >
               ⋯
-            </span>
+            </button>
           )}
         </div>
       </Container>
