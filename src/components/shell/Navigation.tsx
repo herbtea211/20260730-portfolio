@@ -72,13 +72,36 @@ export default function Navigation() {
     });
   };
 
+  const handleItemClick = (index: number) => {
+    const nav = navRef.current;
+
+    if (!nav) return;
+
+    const lastTwoStartIndex = navigation.length - 2;
+
+    if (index >= lastTwoStartIndex) {
+      nav.scrollTo({
+        left: nav.scrollWidth,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    if (index <= 1) {
+      nav.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav className="absolute inset-x-0 top-0 z-10 py-12">
       <Container>
         <div className="relative">
           <ul
             ref={navRef}
-            className="relative flex w-[calc(100%_-_48px)] justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
+            className="relative flex w-[calc(100%_-_60px)] justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
           >
             {activeIndex >= 0 && (
               <span
@@ -104,6 +127,7 @@ export default function Navigation() {
                 >
                   <Link
                     href={item.href}
+                    onClick={() => handleItemClick(index)}
                     className="block rounded-full px-6 py-2 md:px-10"
                   >
                     <span
@@ -125,7 +149,7 @@ export default function Navigation() {
             <button
               type="button"
               onClick={handleOverflowClick}
-              className="text-sectionTitle absolute right-0 top-1/2 -translate-y-1/2 bg-background px-4 py-2 text-primary md:hidden"
+              className="absolute right-0 top-0 flex h-full w-20 items-center justify-end bg-background pr-4 text-sectionTitle text-primary md:hidden"
               aria-label="顯示更多選項"
             >
               ⋯
