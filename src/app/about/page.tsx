@@ -31,8 +31,8 @@ export default function AboutPage() {
           className="mx-auto mt-6 h-[240px] w-px bg-white/40"
           aria-hidden="true"
         />
-        <div className="mx-auto grid max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-[120px]">
-          <p className="pt-12 pb-12 col-span-4 col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
+        <div className="mx-auto grid grid-cols-4 max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-2 md:px-[120px]">
+          <p className="pt-12 pb-12 col-start-1 col-span-4 md:col-span-4 md:col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
             運用使用者研究
             <br />
             產品策略
@@ -42,7 +42,6 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto grid max-w-[1440px] grid-cols-3 gap-x-8 px-4 md:grid-cols-8 md:px-[120px]">
           <div
-            // className="col-span-2 col-start-1 mx-auto"
             className="col-span-1 col-start-1 mx-auto md:col-span-2 md:col-start-1"
             aria-hidden="true"
           >
@@ -71,8 +70,8 @@ export default function AboutPage() {
             aria-hidden="true"
           />
         </div>
-        <div className="mx-auto md:grid max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-[120px]">
-          <p className="pt-12 pb-12 col-span-4 col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
+        <div className="mx-auto grid grid-cols-4 max-w-[1440px] md:grid-cols-8 md:gap-x-8 px-2 md:px-[120px]">
+          <p className="pt-12 pb-12 col-start-1 col-span-4 md:col-span-4 md:col-start-3 text-center text-white font-weight-Medium text-point leading-point tracking-point">
             洞察問題本質
             <br />
             真正解決問題
