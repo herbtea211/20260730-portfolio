@@ -18,6 +18,9 @@ export default function WorkSubNavigation() {
 
   const [hasOverflow, setHasOverflow] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isIndicatorReady, setIsIndicatorReady] = useState(false);
+  const [isTransitionEnabled, setIsTransitionEnabled] = useState(false);
+
   const [indicator, setIndicator] = useState({
     left: 0,
     width: 0,
@@ -33,43 +36,25 @@ export default function WorkSubNavigation() {
 
     if (!activeItem) return;
 
-    const previousHref = sessionStorage.getItem(
-      "workSubNavigationActive"
-    );
+    setIndicator({
+      left: activeItem.offsetLeft,
+      width: activeItem.offsetWidth,
+      height: activeItem.offsetHeight,
+    });
 
-    const previousIndex = workSubNavigation.findIndex(
-      (item) => item.href === previousHref
-    );
-
-    const previousItem = itemRefs.current[previousIndex];
-
-    if (previousItem && previousIndex !== activeIndex) {
-      setIndicator({
-        left: previousItem.offsetLeft,
-        width: previousItem.offsetWidth,
-        height: previousItem.offsetHeight,
-      });
-
-      requestAnimationFrame(() => {
-        setIndicator({
-          left: activeItem.offsetLeft,
-          width: activeItem.offsetWidth,
-          height: activeItem.offsetHeight,
-        });
-      });
-    } else {
-      setIndicator({
-        left: activeItem.offsetLeft,
-        width: activeItem.offsetWidth,
-        height: activeItem.offsetHeight,
-      });
+    if (!isIndicatorReady) {
+      setIsIndicatorReady(true);
+      return;
     }
 
-    sessionStorage.setItem(
-      "workSubNavigationActive",
-      workSubNavigation[activeIndex]?.href ?? ""
-    );
-  }, [activeIndex]);
+    setIsTransitionEnabled(false);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsTransitionEnabled(true);
+      });
+    });
+  }, [activeIndex, isIndicatorReady]);
 
   useEffect(() => {
     const nav = navRef.current;
@@ -121,9 +106,13 @@ export default function WorkSubNavigation() {
             ref={navRef}
             className="relative flex w-full justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
           >
-            {activeIndex >= 0 && (
+            {activeIndex >= 0 && isIndicatorReady && (
               <span
-                className="pointer-events-none absolute z-0 rounded-full border-2 border-primary transition-[left,width,height] duration-300 ease-in-out"
+                className={`pointer-events-none absolute top-0 bottom-0 z-0 rounded-full border-2 border-primary ${
+                  isTransitionEnabled
+                    ? "transition-[left,width,height] duration-[1000ms] ease-in-out"
+                    : ""
+                }`}
                 style={{
                   left: indicator.left,
                   width: indicator.width,
@@ -162,18 +151,6 @@ export default function WorkSubNavigation() {
               );
             })}
           </ul>
-
-          {/*
-          {hasOverflow && !isScrolled && (
-            <button
-              type="button"
-              className="absolute right-0 top-0 z-20 flex h-full w-15 items-center justify-end bg-background pr-4 text-sectionTitle text-primary md:hidden"
-              aria-label="顯示更多選項"
-            >
-              ⋯
-            </button>
-          )}
-          */}
         </div>
       </Container>
     </nav>
