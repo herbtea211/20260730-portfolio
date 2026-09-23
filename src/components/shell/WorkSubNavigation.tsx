@@ -104,7 +104,7 @@ export default function WorkSubNavigation() {
         <div className="relative">
           <ul
             ref={navRef}
-            className="relative flex w-full justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
+            className="scrollbar-hide relative flex w-full justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
           >
             {activeIndex >= 0 && isIndicatorReady && (
               <span

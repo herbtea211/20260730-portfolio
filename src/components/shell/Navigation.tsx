@@ -101,7 +101,7 @@ export default function Navigation() {
         <div className="relative">
           <ul
             ref={navRef}
-            className="relative flex w-[calc(100%_-_60px)] justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
+            className="scrollbar-hide relative flex w-[calc(100%_-_60px)] justify-start gap-4 overflow-x-auto pl-0 md:w-auto md:justify-center md:gap-8 md:overflow-visible"
           >
             {activeIndex >= 0 && (
               <span

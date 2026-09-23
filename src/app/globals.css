@@ -118,3 +118,12 @@ body {
   color: var(--textColor);
   font-family: var(--font-roboto);
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
