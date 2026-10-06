@@ -1,5 +1,5 @@
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
-import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
+import WorkSectionHeading from "@/components/sections/WorkSectionHeading";
 import Bullet from "@/components/ui/Bullet"
 
 export default function ResumePage () {
@@ -15,7 +15,7 @@ export default function ResumePage () {
             <WorkSectionTitle><p className="text-sectionTitle leading-sectionTitle tracking-sectionTitle text-textPrimaryColor">Expertise</p></WorkSectionTitle>
             <div className="flex">
                 <div className="md:pr-12">
-                    <WorkSectionSubtitle>Product Design</WorkSectionSubtitle>
+                    <WorkSectionHeading>Product Design</WorkSectionHeading>
                     <ul className="pb-10">
                         <li
                             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -43,7 +43,7 @@ export default function ResumePage () {
                             <Bullet />Product Decision
                         </li>
                     </ul>
-                    <WorkSectionSubtitle>Systems</WorkSectionSubtitle>
+                    <WorkSectionHeading>Systems</WorkSectionHeading>
                     <ul>
                         <li
                             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -63,7 +63,7 @@ export default function ResumePage () {
                     </ul>
                 </div>
                 <div>
-                <WorkSectionSubtitle>Experience Design</WorkSectionSubtitle>
+                <WorkSectionHeading>Experience Design</WorkSectionHeading>
                     <ul className="pb-17">
                         <li
                             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -86,7 +86,7 @@ export default function ResumePage () {
                             <Bullet />UX Design
                         </li>
                     </ul>
-                    <WorkSectionSubtitle>Technology</WorkSectionSubtitle>
+                    <WorkSectionHeading>Technology</WorkSectionHeading>
                     <ul>
                         <li
                             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"

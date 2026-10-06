@@ -14,7 +14,7 @@ export default function WorkHero({
   description,
 }: WorkHeroProps) {
   return (
-    <section className="md:col-start-2 md:col-span-6 pt-30 md:pt-55 pb-80">
+    <section className="md:col-start-2 md:col-span-6 pt-30 pb-80 md:pt-55">
       <h1 className="font-extraBold text-hero leading-hero tracking-hero text-textPrimaryColor">
         {title}
       </h1>

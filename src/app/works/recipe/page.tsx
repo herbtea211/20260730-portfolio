@@ -1,7 +1,7 @@
 import WorkPage from "@/components/shell/WorkPage";
 import WorkHero from "@/components/sections/workHero";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
-import WorkSectionSubtitle from "@/components/sections/WorkSectionSubtitle";
+import WorkSectionHeading from "@/components/sections/WorkSectionHeading";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
@@ -28,9 +28,9 @@ export default function Page() {
         role="Product Designer / IOS Mobile"
         description={
           <>
-            實務餐飲工作中的配方、採買與成本管理，經常用人工或簡易工具計算，造成大量時間浪費。
+            餐飲工作中的配方、採買與成本管理，經常用人工計算，造成大量時間浪費。
             <br />
-            配配方是一個針對餐飲工作者設計的 Recipe Management Application，將配方管理、份量換算與採買需求整合在同一個工作流程中，有效縮短時間，專注在更有價值的工作上。
+            配配方是一個針對餐飲工作者設計的App，將配方管理、份量換算與採買需求整合在同一個工作流程中，有效縮短時間，專注在更有價值的工作上。
           </>
         }
       />
@@ -43,9 +43,9 @@ export default function Page() {
           <Button showLabel={true} label="Prototype" />
         </Link>
       </div>
-      <section className="col-start-2 col-span-6 py-40 md:py-10">
-        <WorkSectionTitle>01 基礎功能</WorkSectionTitle>
-        <WorkSectionSubtitle>||新增配方</WorkSectionSubtitle>
+      <section className="col-start-2 col-span-6 py-40 md:pt-10 md:pb-50">
+        <WorkSectionTitle>01 | 基礎功能</WorkSectionTitle>
+        <WorkSectionHeading>新增配方</WorkSectionHeading>
 
         <Image
           src={recipe01}
@@ -63,9 +63,9 @@ export default function Page() {
           className="block pb-4 w-[80%] mx-auto md:hidden"
         />
       </section>
-      <section className="col-start-2 col-span-6 pb-40">
-        <WorkSectionTitle>02 專案概述</WorkSectionTitle>
-        <WorkSectionSubtitle>|| Background</WorkSectionSubtitle>
+      <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
+        <WorkSectionTitle>02 | 專案概述</WorkSectionTitle>
+        <WorkSectionHeading>背景</WorkSectionHeading>
 
         <p className="pb-3">
           參與兩段不同規模的餐飲現場，透過實際執行下列工作項目，觀察潛在問題。
@@ -128,8 +128,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="col-start-2 col-span-6 pb-40">
-        <WorkSectionTitle>03 痛點</WorkSectionTitle>
+      <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
+        <WorkSectionTitle>03 | 痛點</WorkSectionTitle>
         <ul className="pb-8">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -152,14 +152,14 @@ export default function Page() {
           alt="原料總需求"
         />
       </section>
-      <section className="col-start-2 col-span-6 pb-40">
-        <WorkSectionTitle>04 產品策略</WorkSectionTitle>
+      <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
+        <WorkSectionTitle>04 | 產品策略</WorkSectionTitle>
 
-        <WorkSectionSubtitle>
+        <WorkSectionHeading>
           從數位配方開始，建立動態的廚房運作系統
-        </WorkSectionSubtitle>
+        </WorkSectionHeading>
 
-        <WorkSectionSubtitle>|| 01．動態換算</WorkSectionSubtitle>
+        <WorkSectionHeading>01．動態換算</WorkSectionHeading>
         <ul className="pb-8">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -167,7 +167,7 @@ export default function Page() {
             <Bullet />依需求自動換算，不受固定倍率限制。
           </li>
         </ul>
-        <WorkSectionSubtitle>|| 02．物料規劃</WorkSectionSubtitle>
+        <WorkSectionHeading>02．物料規劃</WorkSectionHeading>
         <ul className="pb-8">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -180,10 +180,10 @@ export default function Page() {
           alt="物料規劃"
         />
       </section>
-      <section className="col-start-2 col-span-6">
-        <WorkSectionTitle>05 解決方案</WorkSectionTitle>
+      <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
+        <WorkSectionTitle>05 | 解決方案</WorkSectionTitle>
 
-        <WorkSectionSubtitle>|| 固定配方，動態換算</WorkSectionSubtitle>
+        <WorkSectionHeading> 固定配方，動態換算</WorkSectionHeading>
 
         <ul className="pb-10">
           <li
@@ -206,7 +206,7 @@ export default function Page() {
           <p className="text-subContent leading-subContent tracking-subContent">長期習慣<span className="text-textPrimaryColor">固定倍率備餐</span>，遇到<span className="text-textPrimaryColor">緊急情況反應時間過長</span></p>
         </div>
 
-        <WorkSectionSubtitle>|| 選擇成品，一鍵生成採購清單</WorkSectionSubtitle>
+        <WorkSectionHeading>選擇成品，一鍵生成採購清單</WorkSectionHeading>
 
         <ul className="pb-10">
           <li
@@ -238,12 +238,12 @@ export default function Page() {
           <p className="text-subContent leading-subContent tracking-subContent">季度大<span className="text-textPrimaryColor">盤點</span>非常困難，半成品難以<span className="text-textPrimaryColor">回推用料</span></p>
         </div>
       </section>
-      <section className="col-start-2 col-span-6 pb-40">
-        <WorkSectionTitle>06 關鍵學習</WorkSectionTitle>
+      <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
+        <WorkSectionTitle>06 | 關鍵學習</WorkSectionTitle>
 
         <p className="text-textPrimaryColor pb-10">從 0 到 1 打造產品，實際體驗對於挖掘痛點、建立可落地產品非常有幫助。</p>
 
-        <WorkSectionSubtitle>|| 實際體驗</WorkSectionSubtitle>
+        <WorkSectionHeading>實際體驗</WorkSectionHeading>
         <ul className="pb-10">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -252,7 +252,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <WorkSectionSubtitle>|| 挖掘痛點</WorkSectionSubtitle>
+        <WorkSectionHeading>挖掘痛點</WorkSectionHeading>
         <ul className="pb-10">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
@@ -261,7 +261,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <WorkSectionSubtitle>|| 產品落地</WorkSectionSubtitle>
+        <WorkSectionHeading>產品落地</WorkSectionHeading>
         <ul className="pb-10">
           <li
             className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"

@@ -5,7 +5,6 @@ import JourneyStage from "@/components/sections/aboutSectionJourneyStage"
 export default function AboutPage() {
   return (
     <main className="w-full overflow-x-hidden">
-      {/* <section className="relative w-full max-w-[1440px] mx-auto overflow-hidden"> */}
       <section className="relative w-full mx-auto overflow-hidden">
         <Image
           src={heroBackground}

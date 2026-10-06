@@ -5,5 +5,5 @@ type WorkSectionTitleProps = {
 export default function WorkSectionTitle({
   children,
 }: WorkSectionTitleProps) {
-  return <h2 className="text-subSectionTitle leading-subSectionTitle tracking-subSectionTitle font-weight-bold">{children}</h2>;
+  return <h2 className="text-sectionTitle leading-sectionTitle tracking-sectionTitle font-bold pb-2">{children}</h2>;
 }
