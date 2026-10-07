@@ -66,8 +66,7 @@ export default function Page() {
       <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
         <WorkSectionTitle>02 | 專案概述</WorkSectionTitle>
         <WorkSectionHeading>背景</WorkSectionHeading>
-
-        <p className="pb-3">
+        <p className="pb-3 text-content leading-content tracking-content md:text-subContent">
           參與兩段不同規模的餐飲現場，透過實際執行下列工作項目，觀察潛在問題。
         </p>
         <div className="grid grid-cols-2 gap-8">
@@ -79,17 +78,17 @@ export default function Page() {
             <div className="mt-8">
               <ul>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />配方換算
                   </li>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />成本計算
                   </li>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />原料採購
                   </li>
@@ -104,22 +103,22 @@ export default function Page() {
             <div className="mt-8">
               <ul>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />每日備料
                   </li>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />餐點製作
                   </li>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />製作量判斷
                   </li>
                   <li
-                      className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                      className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                   >
                       <Bullet />原料需求估算
                   </li>
@@ -132,17 +131,17 @@ export default function Page() {
         <WorkSectionTitle>03 | 痛點</WorkSectionTitle>
         <ul className="pb-8">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />長期習慣固定倍率備餐，遇到緊急情況反應時間過長
           </li>
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />採購量很難精準計算，造成庫存成本增加
           </li>
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />季度大盤點非常困難，半成品難以回推用料
           </li>
@@ -155,14 +154,14 @@ export default function Page() {
       <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
         <WorkSectionTitle>04 | 產品策略</WorkSectionTitle>
 
-        <WorkSectionHeading>
+        <p className="py-5 text-content leading-content tracking-content md:text-subContent">
           從數位配方開始，建立動態的廚房運作系統
-        </WorkSectionHeading>
+        </p>
 
         <WorkSectionHeading>01．動態換算</WorkSectionHeading>
         <ul className="pb-8">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />依需求自動換算，不受固定倍率限制。
           </li>
@@ -170,7 +169,7 @@ export default function Page() {
         <WorkSectionHeading>02．物料規劃</WorkSectionHeading>
         <ul className="pb-8">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />逐步建立需求、製作量、原料與採購之間的可計算關係。
           </li>
@@ -183,11 +182,13 @@ export default function Page() {
       <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
         <WorkSectionTitle>05 | 解決方案</WorkSectionTitle>
 
-        <WorkSectionHeading> 固定配方，動態換算</WorkSectionHeading>
+        <p className="py-5 text-content leading-content tracking-content md:text-subContent">
+          固定配方，動態換算
+        </p>
 
         <ul className="pb-10">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />逐步建立需求、製作量、原料與採購之間的可計算關係。
           </li>
@@ -210,7 +211,7 @@ export default function Page() {
 
         <ul className="pb-10">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />照清單採購最精簡物料
           </li>
@@ -241,12 +242,12 @@ export default function Page() {
       <section className="col-start-2 col-span-6 pt-10 pb-20 md:pt-10 md:pb-50">
         <WorkSectionTitle>06 | 關鍵學習</WorkSectionTitle>
 
-        <p className="text-textPrimaryColor pb-10">從 0 到 1 打造產品，實際體驗對於挖掘痛點、建立可落地產品非常有幫助。</p>
+        <p className="text-content leading-content tracking-content md:text-subContent text-textPrimaryColor py-10">從 0 到 1 打造產品，實際體驗對於挖掘痛點、建立可落地產品非常有幫助。</p>
 
         <WorkSectionHeading>實際體驗</WorkSectionHeading>
         <ul className="pb-10">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />表面需求 → 各工作節點觀察
           </li>
@@ -255,7 +256,7 @@ export default function Page() {
         <WorkSectionHeading>挖掘痛點</WorkSectionHeading>
         <ul className="pb-10">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />洞察問題 → 解決方案 → 單一功能 → 完整系統
           </li>
@@ -264,24 +265,24 @@ export default function Page() {
         <WorkSectionHeading>產品落地</WorkSectionHeading>
         <ul className="pb-10">
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />規劃資訊架構與核心流程
           </li>
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />建立 Design System
           </li>
 
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />完成核心 UX / UI Design
           </li>
 
           <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
           >
             <Bullet />持續規劃後續產品發展
           </li>

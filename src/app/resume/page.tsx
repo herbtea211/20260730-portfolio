@@ -18,27 +18,27 @@ export default function ResumePage () {
                     <WorkSectionHeading>Product Design</WorkSectionHeading>
                     <ul className="pb-10">
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Problem Exploration
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />User Research
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Product Discovery
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Product Strategy
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Product Decision
                         </li>
@@ -46,17 +46,17 @@ export default function ResumePage () {
                     <WorkSectionHeading>Systems</WorkSectionHeading>
                     <ul>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Design System Building
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Component-based Design
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Cross-functional Collaboration
                         </li>
@@ -66,22 +66,22 @@ export default function ResumePage () {
                 <WorkSectionHeading>Experience Design</WorkSectionHeading>
                     <ul className="pb-17">
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />User Flow
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Interaction Design
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Wireframing
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />UX Design
                         </li>
@@ -89,22 +89,22 @@ export default function ResumePage () {
                     <WorkSectionHeading>Technology</WorkSectionHeading>
                     <ul>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />HTML / CSS
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />JavaScript
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet />Vue.js
                         </li>
                         <li
-                            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                         >
                             <Bullet /> AI-assisted Workflow
                         </li>

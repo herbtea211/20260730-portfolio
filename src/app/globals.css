@@ -23,6 +23,16 @@
   /* WorkSectionHeading */
   --font-size-WorkSectionHeading: 24px;
 
+  /* content=>content */
+  --font-size-content: 16px;
+  --line-height-content: 24px;
+  --letter-spacing-content: 15%;
+
+  /* contentSub=>subContent */
+  --font-size-subContent: 20px;
+  --line-height-subContent: 32px;
+  --letter-spacing-subContent: 12%;
+
   /* 整理完了 end */
 
   /* hero=>hero */
@@ -37,20 +47,11 @@
   --line-height-point: 48px;
   --letter-spacing-point: 8%;
 
-/* contentSub=>subContent */
-  --font-size-subContent: 20px;
-  --line-height-subContent: 32px;
-  --letter-spacing-subContent: 12%;
-
  /* companyTitle=>companyTitle */
   --font-size-companyTitle: 16px;
   --line-height-companyTitle: 32px;
   --letter-spacing-companyTitle: 12%;
 
- /* content=>content */
-  --font-size-content: 16px;
-  --line-height-content: 24px;
-  --letter-spacing-content: 15%; 
 
 }
 
@@ -129,3 +130,5 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+ /* text-content leading-content tracking-content md:text-subContent */

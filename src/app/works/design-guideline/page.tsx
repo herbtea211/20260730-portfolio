@@ -35,22 +35,22 @@ export default function Page() {
       <WorkSectionHeading>Key Contributions</WorkSectionHeading>
       <ul>
         <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
         >
             <Bullet />主導 Design Guideline 重構專案。
         </li>
         <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
         >
             <Bullet />重新整理 Guideline Framework。
         </li>
         <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
         >
             <Bullet />完善既有 Design Token 與 Component 規範。
         </li>
         <li
-            className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+            className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
         >
             <Bullet />制定 Guideline 文件結構與撰寫規範。
         </li>

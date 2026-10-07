@@ -45,7 +45,7 @@ export default function JourneyStage() {
                     {item.learnings.map((learning) => (
                       <li
                         key={learning}
-                        className="flex items-center gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
+                        className="flex items-start gap-2 font-weight-Medium text-subContent leading-subContent tracking-subContent"
                       >
                         <Bullet />
                         {learning}
