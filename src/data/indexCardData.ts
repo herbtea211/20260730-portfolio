@@ -14,7 +14,7 @@ export const indexCardData = [
     href: "/works/recipe",
   },
   {
-    title: "Interactive Space",
+    title: "互動空間",
     subtitle: "Space Design Application",
     role: "Product Designer",
     description:

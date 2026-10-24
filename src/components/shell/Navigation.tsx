@@ -133,8 +133,8 @@ export default function Navigation() {
                     <span
                       className={
                         isActive
-                          ? "text-black"
-                          : "text-textColor hover:text-textPrimary"
+                          ? "text-keyMessage-default text-background"
+                          : "text-keyMessage-default text-white hover:text-textPrimary"
                       }
                     >
                       {item.label}

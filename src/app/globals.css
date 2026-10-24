@@ -1,104 +1,110 @@
+
 @import "tailwindcss";
 
 :root {
-  --BG: #192019;
+  /* Background Colors */
+  --BG: #101210;
   --BGsecondary: #000000;
   --BGwhite: #ededed;
   --white: #ffffff;
 
+  /* Brand & Text Colors */
   --textPrimary: #2FC976;
   --textColor: #989898;
   --primary: #31E583;
 
+  /* Font Family */
   --font-family-hero: var(--font-roboto);
 
-
   /* Typography: Hero */
-  --text-hero: 80px;
-  --weight-hero: 800;
-  --leading-hero: 96px;
-  --tracking-hero: 16px;
+  --hero-size: 70px;
+  --hero-weight: 800;
+  --hero-line-height: 96px;
+  --hero-letter-spacing: 10px;
 
   /* Typography: Section Title */
-  --text-sectionTitle: 64px;
-  --weight-sectionTitle: 700;
-  --leading-sectionTitle: 80px;
-  --tracking-sectionTitle: 9.6px;
+  --section-title-size: 64px;
+  --section-title-weight: 700;
+  --section-title-line-height: 80px;
+  --section-title-letter-spacing: 9.6px;
 
   /* Typography: Hero Subtitle */
-  --text-heroSubtitle: 36px;
-  --weight-heroSubtitle: 700;
-  --leading-heroSubtitle: 43.2px;
-  --tracking-heroSubtitle: 5.76px;
+  --hero-subtitle-size: 36px;
+  --hero-subtitle-weight: 700;
+  --hero-subtitle-line-height: 43.2px;
+  --hero-subtitle-letter-spacing: 5.76px;
 
   /* Typography: Image Title */
-  --text-imageTitle: 24px;
-  --weight-imageTitle: 500;
-  --leading-imageTitle: 28.8px;
-  --tracking-imageTitle: 5.76px;
+  --image-title-size: 24px;
+  --image-title-weight: 500;
+  --image-title-line-height: 28.8px;
+  --image-title-letter-spacing: 5.76px;
 
   /* Typography: Key Message */
-  --text-keyMessage: 20px;
-  --weight-keyMessage: 600;
-  --leading-keyMessage: 30px;
-  --tracking-keyMessage: 4.8px;
+  --key-message-size: 20px;
+  --key-message-weight: 600;
+  --key-message-line-height: 30px;
+  --key-message-letter-spacing: 4px;
 
   /* Typography: Caption */
-  --text-caption: 16px;
-  --weight-caption: 500;
-  --leading-caption: 28px;
-  --tracking-caption: 3.2px;
-
+  --caption-size: 16px;
+  --caption-weight: 500;
+  --caption-line-height: 28px;
+  --caption-letter-spacing: 3.2px;
 }
 
 @theme inline {
+  /* Background Colors */
   --color-background: var(--BG);
   --color-background-secondary: var(--BGsecondary);
   --color-background-white: var(--BGwhite);
   --color-white: var(--white);
 
+  /* Brand & Text Colors */
   --color-textPrimaryColor: var(--textPrimary);
   --color-textColor: var(--textColor);
   --color-primary: var(--primary);
 
+  /* Typography: Hero */
+  --text-hero: var(--hero-size);
+  --font-weight-hero: var(--hero-weight);
+  --leading-hero: var(--hero-line-height);
+  --tracking-hero: var(--hero-letter-spacing);
 
-  /* Typography */
-  --text-hero: var(--text-hero);
-  --font-weight-hero: var(--weight-hero);
-  --leading-hero: var(--leading-hero);
-  --tracking-hero: var(--tracking-hero);
+  /* Typography: Section Title */
+  --text-sectionTitle: var(--section-title-size);
+  --font-weight-sectionTitle: var(--section-title-weight);
+  --leading-sectionTitle: var(--section-title-line-height);
+  --tracking-sectionTitle: var(--section-title-letter-spacing);
 
-  --text-sectionTitle: var(--text-sectionTitle);
-  --font-weight-sectionTitle: var(--weight-sectionTitle);
-  --leading-sectionTitle: var(--leading-sectionTitle);
-  --tracking-sectionTitle: var(--tracking-sectionTitle);
+  /* Typography: Hero Subtitle */
+  --text-heroSubtitle: var(--hero-subtitle-size);
+  --font-weight-heroSubtitle: var(--hero-subtitle-weight);
+  --leading-heroSubtitle: var(--hero-subtitle-line-height);
+  --tracking-heroSubtitle: var(--hero-subtitle-letter-spacing);
 
-  --text-heroSubtitle: var(--text-heroSubtitle);
-  --font-weight-heroSubtitle: var(--weight-heroSubtitle);
-  --leading-heroSubtitle: var(--leading-heroSubtitle);
-  --tracking-heroSubtitle: var(--tracking-heroSubtitle);
+  /* Typography: Image Title */
+  --text-imageTitle: var(--image-title-size);
+  --font-weight-imageTitle: var(--image-title-weight);
+  --leading-imageTitle: var(--image-title-line-height);
+  --tracking-imageTitle: var(--image-title-letter-spacing);
 
-  --text-imageTitle: var(--text-imageTitle);
-  --font-weight-imageTitle: var(--weight-imageTitle);
-  --leading-imageTitle: var(--leading-imageTitle);
-  --tracking-imageTitle: var(--tracking-imageTitle);
+  /* Typography: Key Message */
+  --text-keyMessage: var(--key-message-size);
+  --font-weight-keyMessage: var(--key-message-weight);
+  --leading-keyMessage: var(--key-message-line-height);
+  --tracking-keyMessage: var(--key-message-letter-spacing);
 
-  --text-keyMessage: var(--text-keyMessage);
-  --font-weight-keyMessage: var(--weight-keyMessage);
-  --leading-keyMessage: var(--leading-keyMessage);
-  --tracking-keyMessage: var(--tracking-keyMessage);
-
-  --text-caption: var(--text-caption);
-  --font-weight-caption: var(--weight-caption);
-  --leading-caption: var(--leading-caption);
-  --tracking-caption: var(--tracking-caption);
-
+  /* Typography: Caption */
+  --text-caption: var(--caption-size);
+  --font-weight-caption: var(--caption-weight);
+  --leading-caption: var(--caption-line-height);
+  --tracking-caption: var(--caption-letter-spacing);
 }
-
 
 body {
   background: var(--BG);
-  color: var(--textColor);
+  color: var(--white);
   font-family: var(--font-roboto);
 }
 
@@ -109,5 +115,39 @@ body {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+
+
+@layer components {
+  /* Hero */
+  .text-hero-default {
+    @apply text-hero font-extrabold leading-hero tracking-hero text-textPrimaryColor;
+  }
+
+  /* Section Title */
+  .text-sectionTitle-default {
+    @apply text-sectionTitle font-bold leading-sectionTitle tracking-sectionTitle;
+  }
+
+  /* Hero Subtitle */
+  .text-heroSubtitle-default {
+    @apply text-heroSubtitle font-bold leading-heroSubtitle tracking-heroSubtitle;
+  }
+
+  /* Image Title */
+  .text-imageTitle-default {
+    @apply text-imageTitle font-medium leading-imageTitle tracking-imageTitle;
+  }
+
+  /* Key Message */
+  .text-keyMessage-default {
+    @apply text-keyMessage font-semibold leading-keyMessage tracking-keyMessage text-textColor;
+  }
+
+  /* Caption */
+  .text-caption-default {
+    @apply text-caption font-medium leading-caption tracking-caption;
+  }
 }
 

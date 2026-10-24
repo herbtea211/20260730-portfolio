@@ -16,15 +16,15 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h1 className="font-hero font-extraBold text-hero-mobile md:text-hero leading-hero-mobile md:leading-hero tracking-hero text-textPrimaryColor">理解問題，設計答案</h1>
-                  <p className="font-Medium text-subContent leading-subContent tracking-subContent">
+                  <h1 className="text-hero-default">理解問題，設計答案</h1>
+                  <p className="text-keyMessage-default">
                     探索問題本質，以使用者研究、產品策略與系統思維，驅動產品決策。
                   </p>
                 </div>
               </section>
                 <div className="col-span-8 mb-4">
-                  <h2 className=" font-bold text-sectionTitle leading-sectionTitle tracking-sectionTitle">Seleted Work</h2>
-                  <p className="font-Medium text-subContent leading-subContent tracking-subContent text-textTitle">每一個設計，都有存在的理由</p>
+                  <h2 className="text-heroSubtitle-default">Selected Work</h2>
+                  <p className="text-keyMessage-default">每一個設計，都有存在的理由</p>
                 </div>
                 <IndexCard></IndexCard>
             </main>

@@ -20,25 +20,25 @@ export default function IndexCard() {
 
           <div className="col-span-8 md:col-start-4 md:col-span-5">
             <div className="mb-4 md:mb-12">
-              <h2 className="font-extraBold text-subSectionTitle leading-subSectionTitle tracking-subSectionTitle">
+              <h2 className="text-heroSubtitle-default">
                 {item.title}
               </h2>
 
-              <p className="font-Medium text-subContent leading-subContent tracking-subContent text-textTitle">
+              <p className="text-keyMessage-default">
                 {item.subtitle}
               </p>
             </div>
 
             <div className="mb-4 md:mb-9">
-              <p className="font-Medium text-subContent leading-subContent tracking-subContent">
+              <p className="text-keyMessage-default text-white">
                 {item.role}
               </p>
 
-              <p className="font-Medium text-content leading-content tracking-content">
+              <p className="text-caption-default">
                 {item.description}
               </p>
 
-              <p>{item.platform}</p>
+              <p className="text-caption-default">{item.platform}</p>
             </div>
 
             <Link href={item.href}>
