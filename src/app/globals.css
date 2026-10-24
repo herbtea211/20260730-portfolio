@@ -1,123 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B0E0B;
-  --textColor: #ffffff;
+  --BG: #192019;
+  --BGsecondary: #000000;
+  --BGwhite: #ededed;
+  --white: #ffffff;
+
   --textPrimary: #2FC976;
-  --textTitle: #989898;
+  --textColor: #989898;
   --primary: #31E583;
 
   --font-family-hero: var(--font-roboto);
 
-/* 整理完了 start */
-  --weight-medium: 500;
-  --weight-semibold: 600;
-  --weight-bold: 700;
-  --weight-extraBold: 800;
 
-  /* sectionTitle=>sectionTitle */
-  --font-size-sectionTitle: 32px;
-  --line-height-sectionTitle: normal;
-  --spacing-sectionTitle: 20%;
+  /* Typography: Hero */
+  --text-hero: 80px;
+  --weight-hero: 800;
+  --leading-hero: 96px;
+  --tracking-hero: 16px;
 
-  /* WorkSectionHeading */
-  --font-size-WorkSectionHeading: 24px;
+  /* Typography: Section Title */
+  --text-sectionTitle: 64px;
+  --weight-sectionTitle: 700;
+  --leading-sectionTitle: 80px;
+  --tracking-sectionTitle: 9.6px;
 
-  /* content=>content */
-  --font-size-content: 16px;
-  --line-height-content: 24px;
-  --letter-spacing-content: 15%;
+  /* Typography: Hero Subtitle */
+  --text-heroSubtitle: 36px;
+  --weight-heroSubtitle: 700;
+  --leading-heroSubtitle: 43.2px;
+  --tracking-heroSubtitle: 5.76px;
 
-  /* contentSub=>subContent */
-  --font-size-subContent: 20px;
-  --line-height-subContent: 32px;
-  --letter-spacing-subContent: 12%;
+  /* Typography: Image Title */
+  --text-imageTitle: 24px;
+  --weight-imageTitle: 500;
+  --leading-imageTitle: 28.8px;
+  --tracking-imageTitle: 5.76px;
 
-  /* 整理完了 end */
+  /* Typography: Key Message */
+  --text-keyMessage: 20px;
+  --weight-keyMessage: 600;
+  --leading-keyMessage: 30px;
+  --tracking-keyMessage: 4.8px;
 
-  /* hero=>hero */
-  --font-size-hero: 60px;
-  --font-size-hero-mobile: 40px;
-  --line-height-hero: 86px;
-  --line-height-hero-mobile: 56px;
-  --letter-spacing-hero: 20%;
-
-/* pointContent=>point */
-  --font-size-point: 36px;
-  --line-height-point: 48px;
-  --letter-spacing-point: 8%;
-
- /* companyTitle=>companyTitle */
-  --font-size-companyTitle: 16px;
-  --line-height-companyTitle: 32px;
-  --letter-spacing-companyTitle: 12%;
-
+  /* Typography: Caption */
+  --text-caption: 16px;
+  --weight-caption: 500;
+  --leading-caption: 28px;
+  --tracking-caption: 3.2px;
 
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-textColor: var(--textColor);
+  --color-background: var(--BG);
+  --color-background-secondary: var(--BGsecondary);
+  --color-background-white: var(--BGwhite);
+  --color-white: var(--white);
+
   --color-textPrimaryColor: var(--textPrimary);
-  --color-textTitle: var(--textTitle);
+  --color-textColor: var(--textColor);
   --color-primary: var(--primary);
 
-  --font-hero: var(--font-family-hero);
 
-  --font-weight-Medium: var(--weight-medium);
-  --font-weight-semibold: var(--weight-semibold);
-  --font-weight-bold: var(--weight-bold);
-  --font-weight-extraBold: var(--weight-extraBold);
+  /* Typography */
+  --text-hero: var(--text-hero);
+  --font-weight-hero: var(--weight-hero);
+  --leading-hero: var(--leading-hero);
+  --tracking-hero: var(--tracking-hero);
 
-  /* hero=>hero */
-  --text-hero: var(--font-size-hero);
-  --text-hero-mobile: var(--font-size-hero-mobile);
-  --leading-hero: var(--line-height-hero);
-  --leading-hero-mobile: var(--line-height-hero-mobile);
-  --tracking-hero: var(--letter-spacing-hero);
+  --text-sectionTitle: var(--text-sectionTitle);
+  --font-weight-sectionTitle: var(--weight-sectionTitle);
+  --leading-sectionTitle: var(--leading-sectionTitle);
+  --tracking-sectionTitle: var(--tracking-sectionTitle);
 
-  /* pointContent=>point */
-  --text-point: var(--font-size-point);
-  --leading-point: var(--line-height-point);
-  --tracking-point: var(--letter-spacing-point);
+  --text-heroSubtitle: var(--text-heroSubtitle);
+  --font-weight-heroSubtitle: var(--weight-heroSubtitle);
+  --leading-heroSubtitle: var(--leading-heroSubtitle);
+  --tracking-heroSubtitle: var(--tracking-heroSubtitle);
 
-  /* sectionTitle=>sectionTitle */
-  --text-sectionTitle: var(--font-size-sectionTitle);
-  --leading-sectionTitle: var(--line-height-sectionTitle);
-  --tracking-sectionTitle: var(--spacing-sectionTitle);
+  --text-imageTitle: var(--text-imageTitle);
+  --font-weight-imageTitle: var(--weight-imageTitle);
+  --leading-imageTitle: var(--leading-imageTitle);
+  --tracking-imageTitle: var(--tracking-imageTitle);
 
-  /* WorkSectionHeading */
-  --text-WorkSectionHeading: var(--font-size-WorkSectionHeading);
-  --leading-WorkSectionHeading: var(--line-height-WorkSectionHeading);
+  --text-keyMessage: var(--text-keyMessage);
+  --font-weight-keyMessage: var(--weight-keyMessage);
+  --leading-keyMessage: var(--leading-keyMessage);
+  --tracking-keyMessage: var(--tracking-keyMessage);
 
-  /* contentSub=>subContent */
-  --text-subContent: var(--font-size-subContent);
-  --leading-subContent: var(--line-height-subContent);
-  --tracking-subContent: var(--letter-spacing-subContent);
+  --text-caption: var(--text-caption);
+  --font-weight-caption: var(--weight-caption);
+  --leading-caption: var(--leading-caption);
+  --tracking-caption: var(--tracking-caption);
 
- /* companyTitle=>companyTitle */
-  --text-companyTitle: var(--font-size-companyTitle);
-  --leading-companyTitle: var(--line-height-companyTitle);
-  --tracking-companyTitle: var(--letter-spacing-companyTitle);
-
- /* content=>content */
-  --text-content: var(--font-size-content);
-  --leading-content: var(--line-height-content);
-  --tracking-content: var(--letter-spacing-content);
-
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-
-  }
-} */
 
 body {
-  background: var(--background);
+  background: var(--BG);
   color: var(--textColor);
   font-family: var(--font-roboto);
 }
@@ -131,4 +111,3 @@ body {
   display: none;
 }
 
- /* text-content leading-content tracking-content md:text-subContent */

@@ -6,13 +6,5 @@ export const navigation = [
     {
         label:"Works",
         href:"/works",
-    },
-    {
-        label:"About",
-        href:"/about",
-    },
-    {
-        label:"Resume",
-        href:"/resume",
-    },
+    }
 ];
