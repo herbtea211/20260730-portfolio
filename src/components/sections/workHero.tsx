@@ -1,10 +1,16 @@
+
 import type { ReactNode } from "react";
+import Image, { type StaticImageData } from "next/image";
 
 type WorkHeroProps = {
   title: string;
   subtitle: string;
   role: string;
   description: ReactNode;
+  image?: {
+    src: StaticImageData;
+    alt: string;
+  };
 };
 
 export default function WorkHero({
@@ -12,23 +18,42 @@ export default function WorkHero({
   subtitle,
   role,
   description,
+  image,
 }: WorkHeroProps) {
   return (
-    <section className="md:col-start-2 md:col-span-6 pt-30 pb-80 md:pt-55">
-      <h1 className="font-extraBold text-hero leading-hero tracking-hero text-textPrimaryColor">
-        {title}
-      </h1>
+    <section className="w-full bg-background-secondary pt-20 pb-20 md:py-30">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
+        <div className="md:col-start-2 md:col-span-3">
+          <h1 className="text-hero-default mb-2">
+            {title}
+          </h1>
 
-      <p className="mt-4 font-Medium text-subContent leading-subContent tracking-subContent text-[#989898]">
-        {subtitle}
-      </p>
+          <p className="text-heroSubtitle-default text-textColor mb-8">
+            {subtitle}
+          </p>
 
-      <p className="mt-2 font-Medium text-subContent leading-subContent tracking-subContent">
-        {role}
-      </p>
-      <p className="mt-8 font-Medium text-content leading-content tracking-content">
-        {description}
-      </p>
+          <p className="text-keyMessage-default text-white mb-2">
+            {role}
+          </p>
+
+          <p className="text-caption-default">
+            {description}
+          </p>
+        </div>
+
+        {image && (
+          <div className="md:col-start-5 md:col-span-4">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={1200}
+              height={900}
+              className="h-auto w-full object-contain"
+              sizes="(max-width: 767px) 100vw, 50vw"
+            />
+          </div>
+        )}
+      </div>
     </section>
   );
 }

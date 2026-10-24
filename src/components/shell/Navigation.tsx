@@ -96,7 +96,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-10 py-12">
+    <nav className="fixed top-0 left-0 z-50 w-full pl-4 pt-10 pb-8 md:pt-15 md:pl-0 bg-background">
       <Container>
         <div className="relative">
           <ul

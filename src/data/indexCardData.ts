@@ -1,6 +1,6 @@
 import designGuideline from "@/assets/image/index/designGuideline.png";
 import interactiveSpace from "@/assets/image/index/interactiveSpace.png";
-import recipeManagementAppliction from "@/assets/image/index/recipeManagementAppliction.png";
+import recipeManagementAppliction from "@/assets/image/work/recipe/recipe-1.png";
 
 export const indexCardData = [
   {
