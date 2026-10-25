@@ -4,6 +4,7 @@ import WorkHero from "@/components/sections/workHero";
 import recipeImage01 from "@/assets/image/work/recipe/recipe-1.png";
 import recipeImage02 from "@/assets/image/work/recipe/recipe-2.png";
 import recipeImage03 from "@/assets/image/work/recipe/recipe-3.png";
+import recipeImage04 from "@/assets/image/work/recipe/recipe-4.png";
 import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
 import WorkSectionHeading from "@/components/sections/WorkSectionHeading";
 import Image, { type StaticImageData } from "next/image";
@@ -66,6 +67,30 @@ export default function Page() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="w-full bg-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+          <div className="md:col-start-4 md:col-span-6">
+            <Image
+              src={recipeImage04}
+              alt="配配方 App 採購清單畫面"
+              width={1200}
+              height={900}
+              className="mx-auto h-auto w-full object-contain"
+              sizes="(max-width: 767px) 100vw, 75vw"
+            />
+          </div>
+
+          <h2 className="text-center md:col-start-2 md:col-span-6 text-sectionTitle-default">
+            一鍵整合，
+            <br />
+            高效採購。
+          </h2>
+
+          <p className="text-center md:col-start-2 md:col-span-6 text-keyMessage-default">
+            無論是成品半成品，點選配方後直接<span className="text-white">生成採購清單，自動整合</span>所需食材與用量，省去逐項查找與手動彙整的時間。無論日常備料或大量製備，都能快速掌握採購需求，減少遺漏與重複整理，讓<span className="text-white">前置作業更有效率。</span>
+          </p>
         </div>
       </section>
 
