@@ -71,7 +71,7 @@ export default function Page() {
       </section>
       <section className="w-full bg-background">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-4 md:col-span-6">
+          <div className="md:col-start-2 md:col-span-6">
             <Image
               src={recipeImage04}
               alt="配配方 App 採購清單畫面"
@@ -93,7 +93,100 @@ export default function Page() {
           </p>
         </div>
       </section>
+      <section className="w-full bg-background-secondary py-20">
+        {/* 標題：沿用 8 欄格線 */}
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
+          <h2 className="text-center text-[36px] font-bold tracking-[6px] text-textPrimaryColor sm:text-[48px] sm:tracking-[8px] md:col-span-8 md:text-[70px] md:font-extrabold md:leading-[96px] md:tracking-[10px]">
+            HOW TO DO?
+          </h2>
 
+          <p className="text-center text-keyMessage-default text-[#989898] md:col-span-8">
+            實務參與
+          </p>
+        </div>
+
+        {/* 雙側背景：全寬，不受 max-w-[1440px] 限制 */}
+        <div className="mt-4 grid w-full grid-cols-2 gap-4 md:gap-8">
+          {/* 左側：背景延伸至視窗左邊，內容靠右 */}
+          <div className="flex min-w-0 justify-end rounded-r-3xl bg-[#151515] py-8 pl-2 pr-3 text-right sm:pr-8 md:py-10 md:pr-12">
+            <div>
+              <h3 className="text-imageTitle-default text-white">
+                獨立甜點工作室
+              </h3>
+
+              <div className="my-3 ml-auto h-px w-full bg-[#989898] md:my-4" />
+
+              <ul className="space-y-3 text-keyMessage-default text-white">
+                <li>配方換算</li>
+                <li>成本計算</li>
+                <li>原料採購</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 右側：背景延伸至視窗右邊，內容靠左 */}
+          <div className="flex min-w-0 justify-start rounded-l-3xl bg-[#151515] py-8 pl-3 pr-2 text-left sm:pl-8 md:py-10 md:pl-12">
+            <div>
+              <h3 className="text-imageTitle-default text-white">
+                大型餐飲集團
+              </h3>
+
+              <div className="my-3 h-px w-full bg-[#989898] md:my-4" />
+
+              <ul className="space-y-3 text-keyMessage-default text-white">
+                <li>每日備料</li>
+                <li>餐點製作</li>
+                <li>製作量判斷</li>
+                <li>採購需求估算</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-background-white text-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 px-16 py-20 md:grid-cols-8 md:px-[120px]">
+          <h2 className="text-center md:col-span-8 text-sectionTitle-default">
+            關鍵流程
+          </h2>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:col-span-8">
+            <div className="pb-4">
+              <h3 className="text-center text-heroSubtitle-default">
+                實際體驗
+              </h3>
+              <div className="my-3 h-px w-full bg-textColor" />
+              <p className="text-keyMessage-default text-background">
+                執行各項工作節點，觀察需求與問題。
+              </p>
+            </div>
+
+            <div className="pb-4">
+              <h3 className="text-center text-heroSubtitle-default">
+                挖掘痛點
+              </h3>
+              <div className="my-3 h-px w-full bg-textColor" />
+              <p className="text-keyMessage-default text-background">
+                分析問題背後的原因，將其轉化為痛點後，產出解決方案。
+              </p>
+            </div>
+
+            <div className="pb-4">
+              <h3 className="text-center text-heroSubtitle-default">
+                產品落地
+              </h3>
+              <div className="my-3 h-px w-full bg-textColor" />
+              <p className="text-keyMessage-default text-background">
+                思考核心功能後規劃架構，串聯成完整系統，設計中一邊建立 Design System，完成 MVP 產品。
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center md:col-span-8 pt-4 md:pt-20">
+            <Button showLabel={true} label="prototype" />
+          </div>
+        </div>
+      </section>
     </WorkPage>
   );
 }
