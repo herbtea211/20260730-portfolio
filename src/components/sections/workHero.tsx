@@ -48,7 +48,7 @@ export default function WorkHero({
               alt={image.alt}
               width={1200}
               height={900}
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-contain rounded-[24px]"
               sizes="(max-width: 767px) 100vw, 50vw"
             />
           </div>
