@@ -28,7 +28,7 @@ export default function Page() {
         image={{
           src: recipeImage01,
           alt: "配配方 App 的配方列表與新增配方畫面",
-}}
+        }}
       />
       <section className="w-full">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
