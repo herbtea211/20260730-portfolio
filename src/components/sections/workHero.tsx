@@ -23,8 +23,8 @@ export default function WorkHero({
   return (
     <section className="w-full bg-background-secondary pt-20 pb-20 md:py-30">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
-        <div className="md:col-start-2 md:col-span-3">
-          <h1 className="text-hero-default mb-2">
+        <div className="md:col-start-1 md:col-span-3">
+          <h1 className="text-hero-responsive mb-2">
             {title}
           </h1>
 

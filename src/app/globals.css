@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 :root {
@@ -117,17 +116,48 @@ body {
   display: none;
 }
 
-
-
 @layer components {
   /* Hero */
   .text-hero-default {
     @apply text-hero font-extrabold leading-hero tracking-hero text-textPrimaryColor;
   }
 
+  /* Responsive Hero */
+  .text-hero-responsive {
+    color: var(--textPrimary);
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .text-hero-responsive {
+      font-size: 70px;
+      line-height: 96px;
+      letter-spacing: 10px;
+    }
+  }
+
   /* Section Title */
   .text-sectionTitle-default {
     @apply text-sectionTitle font-bold leading-sectionTitle tracking-sectionTitle;
+  }
+
+  /* Responsive Section Title */
+  .text-sectionTitle-responsive {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 5.4px;
+  }
+
+  @media (min-width: 768px) {
+    .text-sectionTitle-responsive {
+      font-size: 64px;
+      line-height: 80px;
+      letter-spacing: 9.6px;
+    }
   }
 
   /* Hero Subtitle */
@@ -140,6 +170,22 @@ body {
     @apply text-imageTitle font-medium leading-imageTitle tracking-imageTitle;
   }
 
+  /* Responsive Image Title */
+  .text-imageTitle-responsive {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .text-imageTitle-responsive {
+      font-size: 24px;
+      line-height: 28.8px;
+      letter-spacing: 5.76px;
+    }
+  }
+
   /* Key Message */
   .text-keyMessage-default {
     @apply text-keyMessage font-semibold leading-keyMessage tracking-keyMessage text-textColor;
@@ -150,4 +196,3 @@ body {
     @apply text-caption font-medium leading-caption tracking-caption;
   }
 }
-

@@ -5,9 +5,8 @@ import recipeImage01 from "@/assets/image/work/recipe/recipe-1.png";
 import recipeImage02 from "@/assets/image/work/recipe/recipe-2.png";
 import recipeImage03 from "@/assets/image/work/recipe/recipe-3.png";
 import recipeImage04 from "@/assets/image/work/recipe/recipe-4.png";
-import WorkSectionTitle from "@/components/sections/WorkSectionTitle";
-import WorkSectionHeading from "@/components/sections/WorkSectionHeading";
-import Image, { type StaticImageData } from "next/image";
+
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 
@@ -33,7 +32,7 @@ export default function Page() {
       />
       <section className="w-full">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <h2 className="md:col-start-1 md:col-span-6 text-sectionTitle-default">
+          <h2 className="md:col-start-1 md:col-span-6 text-sectionTitle-responsive">
             好管理，省時間。
           </h2>
 
@@ -71,7 +70,7 @@ export default function Page() {
       </section>
       <section className="w-full bg-background">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-2 md:col-span-6">
+          <div className="md:col-start-3 md:col-span-4">
             <Image
               src={recipeImage04}
               alt="配配方 App 採購清單畫面"
@@ -82,7 +81,7 @@ export default function Page() {
             />
           </div>
 
-          <h2 className="text-center md:col-start-2 md:col-span-6 text-sectionTitle-default">
+          <h2 className="text-center md:col-start-3 md:col-span-4 text-sectionTitle-responsive">
             一鍵整合，
             <br />
             高效採購。
@@ -110,7 +109,7 @@ export default function Page() {
           {/* 左側：背景延伸至視窗左邊，內容靠右 */}
           <div className="flex min-w-0 justify-end rounded-r-3xl bg-[#151515] py-8 pl-2 pr-3 text-right sm:pr-8 md:py-10 md:pr-12">
             <div>
-              <h3 className="text-imageTitle-default text-white">
+              <h3 className="text-imageTitle-responsive text-white">
                 獨立甜點工作室
               </h3>
 
@@ -127,7 +126,7 @@ export default function Page() {
           {/* 右側：背景延伸至視窗右邊，內容靠左 */}
           <div className="flex min-w-0 justify-start rounded-l-3xl bg-[#151515] py-8 pl-3 pr-2 text-left sm:pl-8 md:py-10 md:pl-12">
             <div>
-              <h3 className="text-imageTitle-default text-white">
+              <h3 className="text-imageTitle-responsive text-white">
                 大型餐飲集團
               </h3>
 
@@ -182,7 +181,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="flex justify-center md:col-span-8 pt-4 md:pt-20">
+          <div className="flex justify-center md:col-span-8 pt-4 md:pt-20 [&_button]:bg-background [&_button]:text-primary [&_button]:shadow-none">
             <Button showLabel={true} label="prototype" />
           </div>
         </div>
