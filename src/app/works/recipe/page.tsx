@@ -182,7 +182,13 @@ export default function Page() {
           </div>
 
           <div className="flex justify-center md:col-span-8 pt-4 md:pt-20 [&_button]:bg-background [&_button]:text-primary [&_button]:shadow-none">
-            <Button showLabel={true} label="prototype" />
+            <Link
+              href="https://www.figma.com/proto/H4qxpb5olzM8NlCdJ1cCXy/%E9%85%8D%E9%85%8D%E6%96%B9-prototype?node-id=1-199&page-id=0%3A1&starting-point-node-id=1%3A199&t=DtuqgF3Alpl2XY2I-1&scaling=contain&content-scaling=fixed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button showLabel={true} label="prototype" />
+            </Link>
           </div>
         </div>
       </section>
