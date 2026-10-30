@@ -201,6 +201,129 @@ export default function Page() {
           </p>
         </div>
       </section>
+      <section className="w-full bg-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+
+          <h2 className="pb-10 md:py-20 text-center text-[36px] font-bold tracking-[6px] text-textPrimaryColor sm:text-[48px] sm:tracking-[8px] md:col-span-8 md:text-[70px] md:font-extrabold md:leading-[96px] md:tracking-[10px]">
+            HOW TO DO?
+          </h2>
+
+          <h3 className="text-heroSubtitle-default md:col-span-8">
+            競品分析
+          </h3>
+
+          {/* 四象限分析圖 */}
+          <div className="md:col-start-2 md:col-span-6">
+            <Image
+              src={interactiveSpace11}
+              alt="競品分析四象限定位圖"
+              width={1200}
+              height={900}
+              className="mx-auto h-auto w-full rounded-[24px] object-contain"
+              sizes="(max-width: 767px) 100vw, 75vw"
+            />
+          </div>
+
+          <h3 className="pt-20 text-center text-heroSubtitle-default text-white md:col-span-8">
+            高擬真場景 × 低學習成本＝最佳產品定位
+          </h3>
+
+        </div>
+      </section>
+
+      {/* Slogan */}
+      <section className="w-full bg-background">
+        <div className="mx-auto w-full max-w-[1440px] px-8 py-20 md:py-50 md:px-[120px]">
+          <h2 className="text-center text-textPrimaryColor text-sectionTitle-responsive">
+            市場只需要設計師 20% 的能力，
+            <br/>但沒人在賣。
+          </h2>
+        </div>
+      </section>
+      <section className="w-full bg-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+
+          <h2 className="mb-8 text-heroSubtitle-default md:col-span-8">
+            優先目標用戶
+          </h2>
+
+          {/* 左側：人物卡片 */}
+          <div className="flex w-full flex-col items-center justify-between gap-6 rounded-3xl bg-background-secondary px-6 py-6 text-center md:col-start-2 md:col-span-2">
+
+            <h3 className="text-caption-default text-white">
+              孫承勳
+            </h3>
+
+            <Image
+              src={interactiveSpace12}
+              alt="優先目標用戶孫承勳"
+              width={300}
+              height={300}
+              className="h-[144px] w-[144px] rounded-full object-cover"
+            />
+
+            <p className="text-caption-default text-white">
+              窗簾承包商 / 業務經理
+            </p>
+
+          </div>
+
+          {/* 右側：挑戰內容 */}
+          <div className="flex w-full flex-col rounded-3xl bg-background-secondary px-6 py-6 md:col-start-4 md:col-span-4">
+
+            <h3 className="mb-4 text-imageTitle-responsive text-textColor">
+              挑戰
+            </h3>
+
+            <p className="text-caption-default text-white">
+              與業主初期的討論過程中，業主總是想看看各種樣式搭配，即使帶著厚重的實體樣式本，業主還是經常因為無法想像實際的空間搭配而猶豫不決，需要一直產出渲染圖，來回討論。
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+      <section className="w-full bg-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+
+          {/* 標題 */}
+          <h2 className="mb-8 text-heroSubtitle-default md:col-start-2 md:col-span-6">
+            Why this user?
+          </h2>
+
+          {/* 內容區 */}
+          <div className="flex flex-col items-center gap-6 md:col-start-2 md:col-span-6 md:flex-row md:items-stretch md:justify-between">
+
+            {/* 左側 Card */}
+            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[40%]">
+              <h3 className="mb-4 text-imageTitle-responsive text-textPrimaryColor">
+                高時間成本
+              </h3>
+
+              <p className="text-keyMessage-default text-white">
+                快速展示不同材質、規格與搭配方案，用戶廠商能即時回應業主需求，省去渲染示意圖與等待確認的時間，提升提案的溝通效率，投入更多心力在客戶服務與工程推進。
+              </p>
+            </div>
+
+            {/* 加號 */}
+            <div className="text-[48px] font-bold leading-none text-white">
+              +
+            </div>
+
+            {/* 右側 Card */}
+            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[40%]">
+              <h3 className="mb-4 text-imageTitle-responsive text-textPrimaryColor">
+                高改善潛力
+              </h3>
+
+              <p className="text-keyMessage-default text-white">
+                透過即時比較不同材質、規格與搭配效果，協助業主更快理解方案差異、做出選擇，加速決策與成交。
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </WorkPage>
   );
 }
