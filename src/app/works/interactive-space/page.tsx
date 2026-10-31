@@ -208,7 +208,7 @@ export default function Page() {
             HOW TO DO?
           </h2>
 
-          <h3 className="text-heroSubtitle-default md:col-span-8">
+          <h3 className="text-heroSubtitle-default md:col-start-2 md:col-span-6">
             競品分析
           </h3>
 
@@ -243,7 +243,7 @@ export default function Page() {
       <section className="w-full bg-background">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
 
-          <h2 className="mb-8 text-heroSubtitle-default md:col-span-8">
+          <h2 className="text-heroSubtitle-default md:col-start-2 md:col-span-6">
             優先目標用戶
           </h2>
 
@@ -283,11 +283,11 @@ export default function Page() {
 
         </div>
       </section>
-      <section className="w-full bg-background">
+      <section className="w-full bg-background pb-10 md:pb-20">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
 
           {/* 標題 */}
-          <h2 className="mb-8 text-heroSubtitle-default md:col-start-2 md:col-span-6">
+          <h2 className="text-heroSubtitle-default md:col-start-2 md:col-span-6">
             Why this user?
           </h2>
 
@@ -306,7 +306,7 @@ export default function Page() {
             </div>
 
             {/* 加號 */}
-            <div className="text-[48px] font-bold leading-none text-white">
+            <div className="self-center text-[48px] font-bold leading-none text-white">
               +
             </div>
 
@@ -321,6 +321,40 @@ export default function Page() {
               </p>
             </div>
 
+          </div>
+        </div>
+      </section>
+      <section className="w-full bg-background-white text-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-36 md:grid-cols-8 md:px-[120px]">
+          {/* 大標題 */}
+          <h2 className="text-center text-sectionTitle-responsive md:col-span-8">
+            設計之外
+          </h2>
+
+          {/* 第一段：設計師 + 文件 */}
+          <div className="md:col-start-2 md:col-span-6">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+              設計師 + 文件
+            </h3>
+
+            <p className="pt-4 text-keyMessage-default text-[#646464]">
+              在沒有 PM 的情況下，我透過<span className="text-background">設計稿加入文字說明</span>，整理產品需求、操作流程與互動規則，讓工程師能依據設計文件進行開發。
+              <br />
+              設計師可以<span className="text-background">跨出使用者體驗，透過系統化的設計文件</span>，串聯產品與工程，執行產品落地。
+            </p>
+          </div>
+
+          {/* 第二段：研究 → 產品 */}
+          <div className="mt-8 md:col-start-2 md:col-span-6">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+              研究 → 產品
+            </h3>
+
+            <p className="pt-4 text-keyMessage-default text-[#646464]">
+              面對陌生的產業領域，我透過<span className="text-background">競品分析與 Persona</span> 設計方法，逐步理解市場環境與使用者需求，並將研究發現轉化為具體的產品定位與策略。
+              <br />
+              這段經驗讓我理解，<span className="text-background">產品策略不是憑空想像</span>，而是透過<span className="text-background">研究與分析</span>，逐步釐清產品的價值、目標用戶與未來發展方向。
+            </p>
           </div>
         </div>
       </section>

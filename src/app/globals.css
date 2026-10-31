@@ -162,7 +162,18 @@ body {
 
   /* Hero Subtitle */
   .text-heroSubtitle-default {
-    @apply text-heroSubtitle font-bold leading-heroSubtitle tracking-heroSubtitle;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    letter-spacing: 5.12px;
+  }
+
+  @media (min-width: 768px) {
+    .text-heroSubtitle-default {
+      font-size: 36px;
+      line-height: 43.2px;
+      letter-spacing: 5.76px;
+    }
   }
 
   /* Image Title */
