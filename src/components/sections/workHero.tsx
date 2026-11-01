@@ -11,6 +11,7 @@ type WorkHeroProps = {
     src: StaticImageData;
     alt: string;
   };
+  layout?: "split" | "full";
 };
 
 export default function WorkHero({
@@ -19,11 +20,22 @@ export default function WorkHero({
   role,
   description,
   image,
+  layout = "split",
 }: WorkHeroProps) {
+  const isFullLayout = layout === "full";
+
   return (
     <section className="w-full bg-background-secondary pt-20 pb-20 md:py-30">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
-        <div className="md:col-start-1 md:col-span-3">
+        <div
+          className={
+            isFullLayout
+              ? "md:col-span-8"
+              : image
+                ? "md:col-start-1 md:col-span-3"
+                : "md:col-span-8"
+          }
+        >
           <h1 className="text-hero-responsive mb-2">
             {title}
           </h1>
@@ -41,14 +53,14 @@ export default function WorkHero({
           </p>
         </div>
 
-        {image && (
+        {!isFullLayout && image && (
           <div className="md:col-start-5 md:col-span-4">
             <Image
               src={image.src}
               alt={image.alt}
               width={1200}
               height={900}
-              className="h-auto w-full object-contain rounded-[24px]"
+              className="h-auto w-full rounded-[24px] object-contain"
               sizes="(max-width: 767px) 100vw, 50vw"
             />
           </div>
