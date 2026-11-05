@@ -127,8 +127,8 @@ body {
     color: var(--textPrimary);
     font-size: 56px;
     font-weight: 800;
-    line-height: 60px;
-    letter-spacing: 12px;
+    line-height: 70px;
+    letter-spacing: 10px;
   }
 
   @media (min-width: 768px) {

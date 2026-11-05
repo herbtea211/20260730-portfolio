@@ -57,7 +57,7 @@ export default function Page() {
       <section className="w-full bg-background">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
           <div className="md:col-start-3 md:col-span-4">
-            <h2 className="pb-8 text-center text-sectionTitle-responsive">
+            <h2 className="pb-8 text-center text-heroSubtitle-default">
               元件更新
             </h2>
 

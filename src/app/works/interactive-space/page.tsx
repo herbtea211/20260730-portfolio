@@ -35,7 +35,7 @@ export default function Page() {
         }}
       />
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-10 md:grid-cols-8 md:px-[120px]">
           <div className="md:col-start-3 md:col-span-4">
             <h2 className="pb-12 text-center md:col-start-3 md:col-span-4 text-sectionTitle-responsive">
               隨時隨地，
@@ -56,8 +56,28 @@ export default function Page() {
           </p>
         </div>
       </section>
+            {/* Interactive Space Demo Video */}
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-5 pb-10 md:pb-20 md:grid-cols-8 md:px-[120px]">
+          <div className="md:col-start-2 md:col-span-6">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="h-auto w-full rounded-[12px] object-contain md:rounded-[24px]"
+            >
+              <source
+                src="/videos/interactive-space-demo.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </section>
+      <section className="w-full bg-background">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:pb-40 md:grid-cols-8 md:px-[120px]">
           <div className="md:col-start-2 md:col-span-6">
             <h2 className="pb-12 text-center text-sectionTitle-responsive">
               多重視野，
@@ -133,7 +153,7 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background-secondary">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-8 py-20 md:flex-row md:items-start md:gap-6 md:px-[120px]">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-8 py-20 md:flex-row md:items-start md:gap-6 md:px-[120px] md:pt-40">
 
           {/* 左側：文字 + 小圖 */}
           <div className="flex min-w-0 w-full flex-col gap-6 md:w-1/2">

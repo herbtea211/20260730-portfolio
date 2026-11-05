@@ -188,7 +188,7 @@ export default function Navigation() {
                       {item.href === "/" ? (
                         <svg
                           viewBox="0 0 24 24"
-                          className={`h-5 w-5 ${
+                          className={`h-7 w-7 ${
                             isActive
                               ? "text-background"
                               : "text-white"

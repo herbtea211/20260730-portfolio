@@ -15,9 +15,7 @@ export default function Button ({showLabel, label}: ButtonProps) {
                 rounded-full
                 bg-primary
                 text-background
-                hover:bg-transparent
-                hover:text-primary
-                hover:shadow-[inset_0_0_0_2px_var(--primary)]"
+                hover:text-white"
         >
             {showLabel && (
                 <span className="font-bold text-subContent leading-subContent tracking-subContent">
