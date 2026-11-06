@@ -12,11 +12,16 @@ export default function IndexCard() {
           key={item.title}
           className="col-span-8 grid grid-cols-8 gap-8 mb-20"
         >
-          <Image
-            className="col-span-8 md:col-start-1 md:col-span-3"
-            src={item.image}
-            alt={item.title}
-          />
+          <Link
+            href={item.href}
+            className="rounded-[24px] group col-span-8 overflow-hidden md:col-start-1 md:col-span-3"
+          >
+            <Image
+              className="h-auto w-full transition-transform duration-300 ease-in-out md:group-hover:scale-[1.1]"
+              src={item.image}
+              alt={item.title}
+            />
+          </Link>
 
           <div className="col-span-8 md:col-start-4 md:col-span-5">
             <div className="mb-4 md:mb-12">

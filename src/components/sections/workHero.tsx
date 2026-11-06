@@ -25,7 +25,7 @@ export default function WorkHero({
   const isFullLayout = layout === "full";
 
   return (
-    <section className="w-full bg-background-secondary pt-20 pb-20 md:py-30">
+    <section className="w-full bg-background-secondary pt-0 pb-20 md:py-30">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
         <div
           className={
