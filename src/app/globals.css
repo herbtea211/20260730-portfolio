@@ -11,6 +11,7 @@
   --textPrimary: #2FC976;
   --textColor: #989898;
   --primary: #31E583;
+  --textColorWhiteBG: #515151;
 
   /* Font Family */
   --font-family-hero: var(--font-roboto);
@@ -62,6 +63,7 @@
   /* Brand & Text Colors */
   --color-textPrimaryColor: var(--textPrimary);
   --color-textColor: var(--textColor);
+  --color-textColorWhiteBG: var(--textColorWhiteBG);
   --color-primary: var(--primary);
 
   /* Typography: Hero */
@@ -149,7 +151,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
-    letter-spacing: 5.4px;
+    letter-spacing: 4px;
   }
 
   @media (min-width: 768px) {

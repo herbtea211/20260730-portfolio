@@ -95,7 +95,7 @@ export default function Page() {
             />
 
             <div className="mt-4 flex flex-col gap-4 md:flex-row">
-              <div className="w-full rounded-3xl bg-background-secondary p-6 md:w-1/3">
+              <div className="mx-auto w-[70%] rounded-3xl bg-background-secondary p-6 md:mx-0 md:w-1/3">
                 <h3 className="mb-6 text-imageTitle-responsive text-white">
                   移動
                 </h3>
@@ -110,7 +110,7 @@ export default function Page() {
                 />
               </div>
 
-              <div className="w-full rounded-3xl bg-background-secondary p-6 md:w-1/3">
+              <div className="mx-auto w-[70%] rounded-3xl bg-background-secondary p-6 md:mx-0 md:w-1/3">
                 <h3 className="mb-6 text-imageTitle-responsive text-white">
                   視角／升降
                 </h3>
@@ -125,7 +125,7 @@ export default function Page() {
                 />
               </div>
 
-              <div className="w-full rounded-3xl bg-background-secondary p-6 md:w-1/3">
+              <div className="mx-auto w-[70%] rounded-3xl bg-background-secondary p-6 md:mx-0 md:w-1/3">
                 <h3 className="mb-6 text-imageTitle-responsive text-white">
                   視角／旋轉
                 </h3>

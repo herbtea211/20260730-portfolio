@@ -145,7 +145,7 @@ export default function Page() {
 
       <section className="w-full bg-background-white text-background">
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 px-16 py-20 md:grid-cols-8 md:px-[120px]">
-          <h2 className="text-center md:col-span-8 text-sectionTitle-default">
+          <h2 className="text-center md:col-span-8 text-sectionTitle-responsive">
             關鍵流程
           </h2>
 
@@ -155,8 +155,8 @@ export default function Page() {
                 實際體驗
               </h3>
               <div className="my-3 h-px w-full bg-textColor" />
-              <p className="text-keyMessage-default text-background">
-                執行各項工作節點，觀察需求與問題。
+              <p className="text-keyMessage-default text-textColorWhiteBG">
+                執行各項工作節點，<span className="text-background">觀察需求與問題</span>。
               </p>
             </div>
 
@@ -165,8 +165,8 @@ export default function Page() {
                 挖掘痛點
               </h3>
               <div className="my-3 h-px w-full bg-textColor" />
-              <p className="text-keyMessage-default text-background">
-                分析問題背後的原因，將其轉化為痛點後，產出解決方案。
+              <p className="text-keyMessage-default text-textColorWhiteBG">
+                分析問題背後的原因，將其<span className="text-background">轉化為痛點</span>後，產出解決方案。
               </p>
             </div>
 
@@ -175,8 +175,8 @@ export default function Page() {
                 產品落地
               </h3>
               <div className="my-3 h-px w-full bg-textColor" />
-              <p className="text-keyMessage-default text-background">
-                思考核心功能後規劃架構，串聯成完整系統，設計中一邊建立 Design System，完成 MVP 產品。
+              <p className="text-keyMessage-default text-textColorWhiteBG">
+                思考核心功能後規劃架構，串聯成完整系統，設計中一邊建立 Design System，完成 MVP 產品設計。
               </p>
             </div>
           </div>
