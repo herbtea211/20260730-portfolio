@@ -6,7 +6,7 @@ type WorkPageProps = {
 
 export default function WorkPage({ children }: WorkPageProps) {
   return (
-    <div className="w-full pt-[120px]">
+    <div className="w-full">
       <main className="w-full">
         {children}
       </main>

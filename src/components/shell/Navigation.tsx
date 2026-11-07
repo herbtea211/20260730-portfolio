@@ -86,7 +86,7 @@ export default function Navigation() {
   }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-background pl-4 pt-10 pb-8 md:pl-0 md:pt-15">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-background pl-4 pt-6 pb-6 md:pl-0 md:pt-15">
 
       {/* Mobile Navigation */}
       <div className="relative z-50 md:hidden">
