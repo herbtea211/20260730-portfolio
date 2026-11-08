@@ -209,3 +209,24 @@ body {
     @apply text-caption font-medium leading-caption tracking-caption;
   }
 }
+
+@keyframes roof-lift {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  35% {
+    transform: translateY(-3px) rotate(-8deg);
+  }
+  65% {
+    transform: translateY(-3px) rotate(-8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.roof-lift {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: roof-lift 400ms ease-in-out;
+}

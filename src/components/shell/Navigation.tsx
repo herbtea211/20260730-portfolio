@@ -40,6 +40,8 @@ export default function Navigation() {
     width: 0,
   });
 
+  const [isRoofLifting, setIsRoofLifting] = useState(false);
+
   const activeIndex = navigation.findIndex(
     (item) =>
       pathname === item.href ||
@@ -86,10 +88,10 @@ export default function Navigation() {
   }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-background pl-4 pt-6 pb-6 md:pl-0 md:pt-15">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-background pl-4 pt-6 pb-6 md:pl-0 md:pt-10 lg-pt-15">
 
       {/* Mobile Navigation */}
-      <div className="relative z-50 md:hidden">
+      <div className="relative z-50 lg:hidden">
         <Container>
           <div className="flex items-center justify-between">
 
@@ -97,8 +99,11 @@ export default function Navigation() {
             <Link
               href="/"
               aria-label="Home"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex h-10 w-10 items-center justify-center"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setIsRoofLifting(true);
+              }}
+              className="flex h-10 w-10 items-center justify-center md:translate-x-4"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -110,7 +115,11 @@ export default function Navigation() {
                 strokeLinejoin="round"
                 aria-hidden="true"
               >
-                <path d="m3 10 9-7 9 7" />
+                <path
+                  d="m3 10 9-7 9 7"
+                  className={isRoofLifting ? "roof-lift" : ""}
+                  onAnimationEnd={() => setIsRoofLifting(false)}
+                />
                 <path d="M5 9v11h14V9" />
                 <path d="M9 20v-7h6v7" />
               </svg>
@@ -152,7 +161,7 @@ export default function Navigation() {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Container>
           <div className="relative">
             <ul
@@ -227,7 +236,7 @@ export default function Navigation() {
       {/* Mobile Fullscreen Menu */}
       <div
         aria-hidden={!isMenuOpen}
-        className={`fixed inset-0 z-40 flex min-h-dvh items-center justify-center bg-background px-8 transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 flex min-h-dvh items-center justify-center bg-background px-8 transition-all duration-300 lg:hidden ${
           isMenuOpen
             ? "visible opacity-100"
             : "invisible opacity-0 pointer-events-none"
