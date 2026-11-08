@@ -243,7 +243,7 @@ export default function Page() {
             <p className="pt-4 text-keyMessage-default text-[#646464]">
               業務、美術與 UI 團隊對行銷視覺規範有不同的工作目標，因此關注的議題也不同，業務重績效、美術重自主性、ＵＩ講求一致性。
               <br />
-              我先理解各部門的工作目標，再以對方關注的議題作為溝通切入點，例如：點擊率、規範彈性，讓跨部門同仁願意接受 Guideline重構的陣痛期。 
+              我先理解各<span className="text-background">部門的工作目標</span>，再以對方<span className="text-background">關注的議題</span>作為溝通切入點，例如：點擊率、規範彈性，讓跨部門同仁願意接受 Guideline重構的陣痛期。 
             </p>
           </div>
 
@@ -256,7 +256,7 @@ export default function Page() {
             <p className="pt-4 text-keyMessage-default text-[#646464]">
               Guideline完成後，前端需要修改樣式與 Token Mapping，結果前端根本不想改。
               <br />
-              我主動向前端團隊取得程式碼，研究 Token 的實作方式，並共同調整 Token Mapping，同時提前與前端同步後續可能的設計調整方向，讓設計規範與實際開發保持一致，降低後續設計變更帶來的修改成本。
+              我主動向前端團隊取得程式碼，<span className="text-background">研究 Token 的實作方式</span>，並共同調整 Token Mapping，同時提前與前端同步後續可能的設計調整方向，讓設計規範與實際開發保持一致，降低後續設計變更帶來的修改成本。
             </p>
           </div>
         </div>
