@@ -30,8 +30,8 @@ export default function Page() {
       />
       <GuidelineCarousel />
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-10 md:pt-40 md:pb-20 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-3 md:col-span-4">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-10 md:pt-40 md:pb-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
+          <div className="md:col-start-2 md:col-span-6">
             <h2 className="text-center md:col-start-3 md:col-span-4 text-sectionTitle-responsive">
               重整文件，
               <br />
@@ -48,15 +48,15 @@ export default function Page() {
             />
           </div>
 
-          <p className="text-center md:col-start-3 md:col-span-4 text-keyMessage-default">
+          <p className="text-center md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4 text-keyMessage-default">
             重新整理 Guideline 架構與設計規範，使其更貼近<span className="text-white">品牌重構</span>方向，並逐步改善長期累積的設計問題，重新成為<span className="text-white">支撐產品與開發</span>的重要基礎。
           </p>
         </div>
       </section>
 
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-3 md:col-span-4">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
+          <div className=" md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             <h2 className="pb-8 text-center text-heroSubtitle-default">
               元件更新
             </h2>
@@ -82,15 +82,15 @@ export default function Page() {
             </div>
           </div>
 
-          <p className="text-center md:col-start-3 md:col-span-4 text-keyMessage-default">
+          <p className="text-center md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4 text-keyMessage-default">
             更新 Guideline 中的多項元件，使其更貼近<span className="text-white">電商需求與 UI 設計趨勢</span>，在維持設計一致性的同時保留應用彈性，提升 Guideline 的實用性與延續性。
           </p>
         </div>
       </section>
 
       <section className="w-full bg-background-secondary">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-2 md:col-span-6">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8  md:px-[40px] lg:px-[120px]">
+          <div className=" md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             <h2 className="pb-8 text-center text-sectionTitle-responsive">
               重新定位，
               <br />
@@ -127,7 +127,7 @@ export default function Page() {
             </div>
           </div>
 
-          <p className="text-center md:col-start-3 md:col-span-4 text-keyMessage-default">
+          <p className="text-center md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4 text-keyMessage-default">
             透過協調 ART team 的視覺需求，將原本<span className="text-white">獨立於 Guideline 之外</span>的 Marketing Visuals <span className="text-white">整合至統一的色彩系統中</span>，在保留品牌創作彈性的同時，提升 UI 與品牌視覺的一致性。
           </p>
         </div>
@@ -135,7 +135,7 @@ export default function Page() {
 
 
       <section className="w-full bg-background-secondary">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8  md:px-[40px] lg:px-[120px]">
 
           {/* Section Content */}
           <div className="md:col-start-2 md:col-span-6">
@@ -228,15 +228,15 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background-white text-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-36 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-16 md:py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
           {/* 大標題 */}
           <h2 className="text-center text-sectionTitle-responsive md:col-span-8">
             挑戰
           </h2>
 
           {/* 第一段：設計師 + 文件 */}
-          <div className="md:col-start-2 md:col-span-6">
-            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+          <div className="md:col-start-2 md:col-span-6 md:pt-10">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default text-center">
               要我改？憑什麼？
             </h3>
 
@@ -249,7 +249,7 @@ export default function Page() {
 
           {/* 第二段：研究 → 產品 */}
           <div className="mt-8 md:col-start-2 md:col-span-6">
-            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default text-center">
               我很忙，以後再說...
             </h3>
 

@@ -32,7 +32,7 @@ export default function WorkHero({
             isFullLayout
               ? "md:col-span-8"
               : image
-                ? "md:col-start-1 md:col-span-3"
+                ? "md:col-span-8 lg:col-start-1 lg:col-span-3"
                 : "md:col-span-8"
           }
         >
@@ -54,14 +54,14 @@ export default function WorkHero({
         </div>
 
         {!isFullLayout && image && (
-          <div className="md:col-start-5 md:col-span-4">
+          <div className="md:col-span-8 lg:col-start-5 lg:col-span-4">
             <Image
               src={image.src}
               alt={image.alt}
               width={1200}
               height={900}
               className="h-auto w-full rounded-[24px] object-contain"
-              sizes="(max-width: 767px) 100vw, 50vw"
+              sizes="(max-width: 1023px) 100vw, 50vw"
             />
           </div>
         )}

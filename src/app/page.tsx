@@ -6,14 +6,14 @@ import IndexCard from "@/components/sections/IndexCard"
 export default function Home() {
   return (
           <main className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-8 gap-8 mb-30">
-              <section className="col-start-1 col-span-8 lg:col-start-2 lg:col-span-7 flex flex-col items-center gap-8 py-50 md:py-50 lg:pt-100 md:flex-col md:items-start lg:flex-row lg:items-start">
-                <div className="shrink-0 md:self-center">
+              <section className="col-start-1 col-span-8 lg:col-start-2 lg:col-span-6 flex flex-col items-center gap-8 py-50 md:py-50 lg:pt-100 md:flex-col md:items-start lg:flex-row lg:items-start">
+                  <div className="shrink-0 md:self-center">
                   <Image
                     src={avatar}
                     alt="Sam"
                     width={180}
                     height={180}
-                    className="h-[180px] w-[180px]"
+                    className="h-[140px] w-[140px]"
                   />
                 </div>
                 <div>

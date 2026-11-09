@@ -16,11 +16,6 @@ import interactiveSpace11 from "@/assets/image/work/interactive-space/interactiv
 import interactiveSpace12 from "@/assets/image/work/interactive-space/interactive-space-12.png";
 
 
-
-
-
-
-
 export default function Page() {
   return (
     <WorkPage>
@@ -35,8 +30,8 @@ export default function Page() {
         }}
       />
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-10 md:grid-cols-8 md:px-[120px]">
-          <div className="md:col-start-3 md:col-span-4">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-10 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
+          <div className="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             <h2 className="pb-12 text-center md:col-start-3 md:col-span-4 text-sectionTitle-responsive">
               隨時隨地，
               <br />
@@ -58,7 +53,7 @@ export default function Page() {
       </section>
             {/* Interactive Space Demo Video */}
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-5 pb-10 md:pb-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-5 pb-10 md:pb-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
           <div className="md:col-start-2 md:col-span-6">
             <video
               autoPlay
@@ -77,12 +72,12 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:pb-40 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:pb-40 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
           <div className="md:col-start-2 md:col-span-6">
             <h2 className="pb-12 text-center text-sectionTitle-responsive">
               多重視野，
               <br />
-              體驗無邊界。
+              體驗無限。
             </h2>
 
             <Image
@@ -90,7 +85,7 @@ export default function Page() {
               alt="互動空間全景操作介面"
               width={1200}
               height={900}
-              className="mx-auto h-auto w-full rounded-[24px] object-contain md:px-40 md:pb-10"
+              className="mx-auto h-auto w-full rounded-[24px] object-contain md:px-40px md:pb-10 lg:px-40 lg:pb-10"
               sizes="(max-width: 767px) 100vw, 75vw"
             />
 
@@ -261,14 +256,14 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
 
           <h2 className="text-heroSubtitle-default md:col-start-2 md:col-span-6">
             優先目標用戶
           </h2>
 
           {/* 左側：人物卡片 */}
-          <div className="flex w-full flex-col items-center justify-between gap-6 rounded-3xl bg-background-secondary px-6 py-6 text-center md:col-start-2 md:col-span-2">
+          <div className="flex w-full flex-col items-center justify-between gap-6 rounded-3xl bg-background-secondary px-6 py-6 text-center md:col-start-2 md:col-span-3  lg:col-start-2 lg:col-span-2">
 
             <h3 className="text-caption-default text-white">
               孫承勳
@@ -289,7 +284,7 @@ export default function Page() {
           </div>
 
           {/* 右側：挑戰內容 */}
-          <div className="flex w-full flex-col rounded-3xl bg-background-secondary px-6 py-6 md:col-start-4 md:col-span-4">
+          <div className="flex w-full flex-col rounded-3xl bg-background-secondary px-6 py-6 md:col-start-5 md:col-span-3 lg:col-start-4 lg:col-span-4">
 
             <h3 className="mb-4 text-imageTitle-responsive text-textColor">
               挑戰
@@ -304,7 +299,7 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background pb-10 md:pb-20">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
 
           {/* 標題 */}
           <h2 className="text-heroSubtitle-default md:col-start-2 md:col-span-6">
@@ -315,7 +310,7 @@ export default function Page() {
           <div className="flex flex-col items-center gap-6 md:col-start-2 md:col-span-6 md:flex-row md:items-stretch md:justify-between">
 
             {/* 左側 Card */}
-            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[40%]">
+            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[45%] lg:w-[40%]">
               <h3 className="mb-4 text-imageTitle-responsive text-textPrimaryColor">
                 高時間成本
               </h3>
@@ -331,7 +326,7 @@ export default function Page() {
             </div>
 
             {/* 右側 Card */}
-            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[40%]">
+            <div className="w-full rounded-3xl bg-background-secondary px-8 py-8 md:w-[45%] lg:w-[40%]">
               <h3 className="mb-4 text-imageTitle-responsive text-textPrimaryColor">
                 高改善潛力
               </h3>
@@ -345,15 +340,15 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background-white text-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 pt-20 pb-36 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-16 md:py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
           {/* 大標題 */}
           <h2 className="text-center text-sectionTitle-responsive md:col-span-8">
             設計之外
           </h2>
 
           {/* 第一段：設計師 + 文件 */}
-          <div className="md:col-start-2 md:col-span-6">
-            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+          <div className="md:col-start-2 md:col-span-6 md:pt-10">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default text-center">
               設計師 + 文件
             </h3>
 
@@ -366,7 +361,7 @@ export default function Page() {
 
           {/* 第二段：研究 → 產品 */}
           <div className="mt-8 md:col-start-2 md:col-span-6">
-            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default">
+            <h3 className="border-b border-[#989898] pb-4 text-heroSubtitle-default text-center">
               研究 → 產品
             </h3>
 

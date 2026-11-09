@@ -11,8 +11,6 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 
-
-
 export default function Page() {
   return (
     <WorkPage>
@@ -31,13 +29,13 @@ export default function Page() {
         }}
       />
       <section className="w-full">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
-          <h2 className="md:col-start-1 md:col-span-6 text-sectionTitle-responsive">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[40px] lg:px-[120px]">
+          <h2 className="md:col-start-1 md:col-span-8 text-sectionTitle-responsive">
             好管理，省時間。
           </h2>
 
           <div className="grid grid-cols-1 gap-8 md:col-span-8 md:grid-cols-2">
-            <div className="relative flex min-w-0 flex-col justify-end overflow-hidden rounded-3xl bg-background-secondary h-[300px] md:h-auto">
+            <div className="relative flex min-w-0 flex-col justify-end overflow-hidden rounded-3xl bg-background-secondary h-[300px] md:h-[320px] lg:h-[400px]">
               <Image
                 src={recipeImage02}
                 alt="配配方 App 配方管理畫面"
@@ -51,7 +49,7 @@ export default function Page() {
                 隨時查看與調整，捨棄繁瑣工具與紙本紀錄，創意不受限，盡情探索料理的無限可能。
               </p>
             </div>
-            <div className="relative flex min-w-0 flex-col justify-end overflow-hidden rounded-3xl bg-background-secondary h-[300px] md:h-auto">
+            <div className="relative flex min-w-0 flex-col justify-end overflow-hidden rounded-3xl bg-background-secondary h-[300px] md:h-[320px] lg:h-[400px]">
               <Image
                 src={recipeImage03}
                 alt="配配方 App 配方管理畫面"
@@ -69,7 +67,7 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 py-20 md:grid-cols-8 md:px-[80px] lg:px-[120px]">
           <div className="md:col-start-3 md:col-span-4">
             <Image
               src={recipeImage04}
@@ -81,7 +79,7 @@ export default function Page() {
             />
           </div>
 
-          <h2 className="text-center md:col-start-3 md:col-span-4 text-sectionTitle-responsive">
+          <h2 className="text-center md:col-start-2 md:col-span-7 lg:col-start-3 lg:col-span-4 text-sectionTitle-responsive">
             一鍵整合，
             <br />
             高效採購。
@@ -94,7 +92,7 @@ export default function Page() {
       </section>
       <section className="w-full bg-background-secondary py-20">
         {/* 標題：沿用 8 欄格線 */}
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-8 md:grid-cols-8 md:px-[80px] lg:px-[120px]">
           <h2 className="text-center text-[36px] font-bold tracking-[6px] text-textPrimaryColor sm:text-[48px] sm:tracking-[8px] md:col-span-8 md:text-[70px] md:font-extrabold md:leading-[96px] md:tracking-[10px]">
             HOW TO DO?
           </h2>
@@ -144,7 +142,7 @@ export default function Page() {
       </section>
 
       <section className="w-full bg-background-white text-background">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 px-16 py-20 md:grid-cols-8 md:px-[120px]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 px-16 py-20 md:grid-cols-8 md:px-[80px] lg:px-[120px]">
           <h2 className="text-center md:col-span-8 text-sectionTitle-responsive">
             關鍵流程
           </h2>
