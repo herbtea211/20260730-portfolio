@@ -46,7 +46,7 @@ export default function Page() {
               sizes="(max-width: 767px) 100vw, 75vw"
             />
           </div>
-          <p className="text-center md:col-start-3 md:col-span-4 text-keyMessage-default">
+          <p className="text-center md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4 text-keyMessage-default">
             『互動空間』打破了<span className="text-white">時間與空間</span>的限制，使用者可以隨時從一個原創空間開始，<span className="text-white">置入家具及生活用品</span>，在這裡四處閒逛，品嚐細節，感受未來精彩生活。
           </p>
         </div>
@@ -137,7 +137,7 @@ export default function Page() {
             </div>
           </div>
 
-          <p className="text-center text-keyMessage-default md:col-start-3 md:col-span-4">
+          <p className="text-center text-keyMessage-default md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             豐富的操作系統突破了
             <span className="text-white">物理限制</span>，可以從
             <span className="text-white">任何角度</span>
